@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './Main_pages/About.jsx';
 import Segments from './Main_pages/Segments.jsx';
 import Activites from './Main_pages/Activites.jsx';
+import OurGrossReach from './Main_pages/OurGrossReach.jsx';
 import Gold from './Main_pages/Partners/Gold.jsx';
 import Platinum from './Main_pages/Partners/Platinum.jsx';
 import Premium from './Main_pages/Partners/Premium.jsx';
@@ -26,6 +27,7 @@ function App() {
             <Route path="/partners/premium" element={<Premium/>} />
             <Route path="/partners/supporting" element={<Supporting/>} />
             <Route path="/segments" element={<Segments/>} />
+            <Route path="/our-gross-reach" element={<OurGrossReach/>} />
             <Route path="/about-us" element={<About />} />
           </Routes>
         </div>

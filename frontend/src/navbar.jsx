@@ -29,6 +29,7 @@ export default function Navbar({ user, onLogout = () => {} }) {
     { name: "Activities", link: "/activities" },
     { name: "Partners", link: "/partners/gold" },
     { name: "Segments", link: "/segments" },
+    { name: "Our Gross Reach", link: "/our-gross-reach" },
     { name: "About Us", link: "/about-us" },
   ];
 
