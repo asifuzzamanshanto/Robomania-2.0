@@ -11,7 +11,10 @@ import Gold from './Main_pages/Partners/Gold.jsx';
 import Platinum from './Main_pages/Partners/Platinum.jsx';
 import Premium from './Main_pages/Partners/Premium.jsx';
 import Supporting from './Main_pages/Partners/Supporting.jsx';
-import Events from './Main_pages/Events.jsx';
+
+import Event from './Main_pages/Event.jsx';
+import PrevEvents from './Main_pages/PrevEvents.jsx';
+
 function App() {
   return (
    <BrowserRouter>
@@ -27,7 +30,9 @@ function App() {
             <Route path="/partners/supporting" element={<Supporting/>} />
             <Route path="/segments" element={<Segments/>} />
             <Route path="/about-us" element={<About />} />
-            <Route path="/events" element={<Events />} />
+           
+            <Route path="/previous-events" element={<PrevEvents />} />
+            <Route path="/event" element={<Event />} />
           </Routes>
         </div>
     </AuroraBackground>
