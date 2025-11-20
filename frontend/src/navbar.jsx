@@ -3,7 +3,12 @@
 import React, { useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "motion/react";
 
 const PALETTE = {
   left: "#127f40",
@@ -24,6 +29,7 @@ export default function Navbar({ user, onLogout = () => {} }) {
     { name: "Activities", link: "/activities" },
     { name: "Partners", link: "/partners/gold" },
     { name: "Segments", link: "/segments" },
+    { name: "Our Gross Reach", link: "/our-gross-reach" },
     { name: "About Us", link: "/about-us" },
   ];
 
@@ -53,14 +59,18 @@ export default function Navbar({ user, onLogout = () => {} }) {
           transition={{ type: "spring", stiffness: 220, damping: 36 }}
           className={cn(
             "mx-auto flex h-14 items-center justify-between rounded-full border px-3 sm:px-4",
-            "bg-white/10 border-white/15 ring-1 ring-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.18)]"
+            // CHANGED: solid bg #554110, keep border/ring/shadow
+            "bg-[#554110] border-white/15 ring-1 ring-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.18)]"
           )}
           style={{
-            backgroundImage: `linear-gradient(135deg, ${PALETTE.left}22, ${PALETTE.mid}18 45%, ${PALETTE.right}22)`,
+            backgroundColor: "#554110",
           }}
         >
           {/* Brand */}
-          <a href="/" className="flex items-center gap-2 rounded-full px-2 py-1">
+          <a
+            href="/"
+            className="flex items-center gap-2 rounded-full px-2 py-1"
+          >
             <span
               className="h-6 w-6 rounded-full shadow-inner"
               style={{
@@ -90,7 +100,8 @@ export default function Navbar({ user, onLogout = () => {} }) {
                       aria-current={active ? "page" : undefined}
                       className={cn(
                         "group relative rounded-full px-3 py-2 text-sm/6 text-white transition-colors",
-                        "hover:text-white"
+                        // CHANGED: hover yellow
+                        "hover:text-yellow-300"
                       )}
                     >
                       {item.name}
@@ -118,7 +129,8 @@ export default function Navbar({ user, onLogout = () => {} }) {
                       aria-current={active ? "page" : undefined}
                       className={cn(
                         "relative rounded-full px-3 py-2 text-sm/6 text-white transition-colors",
-                        "hover:text-white"
+                        // CHANGED: hover yellow
+                        "hover:text-yellow-300"
                       )}
                     >
                       {item.name}
@@ -135,15 +147,13 @@ export default function Navbar({ user, onLogout = () => {} }) {
                     </a>
 
                     {/* Dropdown */}
-                    <div
-                      className="pointer-events-none absolute left-1/2 top-full z-40 mt-2 w-56 -translate-x-1/2 rounded-2xl border border-white/15 bg-black/70 backdrop-blur-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto"
-                    >
+                    <div className="pointer-events-none absolute left-1/2 top-full z-40 mt-2 w-56 -translate-x-1/2 rounded-2xl border border-white/15 bg-black/70 backdrop-blur-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto">
                       <ul className="py-2 text-sm text-white">
                         {partnerOptions.map((opt) => (
                           <li key={opt.link}>
                             <a
                               href={opt.link}
-                              className="block px-3 py-1.5 hover:bg-white/10 text-white"
+                              className="block px-3 py-1.5 text-white hover:text-yellow-300 hover:bg-white/10"
                             >
                               {opt.name}
                             </a>
@@ -179,9 +189,10 @@ export default function Navbar({ user, onLogout = () => {} }) {
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
-              className="mx-auto mt-2 rounded-3xl border border-white/15 bg-white/10 p-2 ring-1 ring-white/10 backdrop-blur-xl lg:hidden"
+              className="mx-auto mt-2 rounded-3xl border border-white/15 bg-[#554110] p-2 ring-1 ring-white/10 backdrop-blur-xl lg:hidden"
               style={{
-                backgroundImage: `linear-gradient(135deg, ${PALETTE.left}22, ${PALETTE.mid}18 45%, ${PALETTE.right}22)`,
+                // CHANGED: solid background #554110
+                backgroundColor: "#554110",
               }}
             >
               <ul className="grid gap-1">
@@ -197,12 +208,16 @@ export default function Navbar({ user, onLogout = () => {} }) {
                           onClick={() => setOpen(false)}
                           className={cn(
                             "flex items-center justify-between rounded-2xl px-3 py-2 text-base transition",
-                            "text-white hover:text-white hover:bg-white/10"
+                            // CHANGED: white text, yellow hover
+                            "text-white hover:text-yellow-300 hover:bg-white/10"
                           )}
                         >
                           {item.name}
                           <span
-                            className={cn("h-2 w-2 rounded-full", active ? "" : "opacity-0")}
+                            className={cn(
+                              "h-2 w-2 rounded-full",
+                              active ? "" : "opacity-0"
+                            )}
                             style={{
                               background: `radial-gradient(circle, ${PALETTE.right}, ${PALETTE.mid})`,
                             }}
@@ -221,12 +236,16 @@ export default function Navbar({ user, onLogout = () => {} }) {
                           onClick={() => setOpen(false)}
                           className={cn(
                             "flex items-center justify-between rounded-2xl px-3 py-2 text-base transition",
-                            "text-white hover:text-white hover:bg-white/10"
+                            // CHANGED: white text, yellow hover
+                            "text-white hover:text-yellow-300 hover:bg-white/10"
                           )}
                         >
                           {item.name}
                           <span
-                            className={cn("h-2 w-2 rounded-full", active ? "" : "opacity-0")}
+                            className={cn(
+                              "h-2 w-2 rounded-full",
+                              active ? "" : "opacity-0"
+                            )}
                             style={{
                               background: `radial-gradient(circle, ${PALETTE.right}, ${PALETTE.mid})`,
                             }}
@@ -238,7 +257,7 @@ export default function Navbar({ user, onLogout = () => {} }) {
                           <a
                             href={opt.link}
                             onClick={() => setOpen(false)}
-                            className="flex items-center justify-between rounded-2xl px-5 py-2 text-sm text-white hover:text-white hover:bg-white/10"
+                            className="flex items-center justify-between rounded-2xl px-5 py-2 text-sm text-white hover:text-yellow-300 hover:bg-white/10"
                           >
                             {opt.name}
                           </a>
@@ -256,7 +275,7 @@ export default function Navbar({ user, onLogout = () => {} }) {
   );
 }
 
-/* ---------- Buttons (still available if you need later) ---------- */
+/* ---------- Buttons (unchanged, just keep for later) ---------- */
 function NavBtn({
   as: Tag = "a",
   href,
@@ -270,11 +289,16 @@ function NavBtn({
   const styles =
     variant === "gradient"
       ? cn("text-white ring-1 ring-white/15 shadow", className)
-      : cn("text-white border border-white/20 bg-white/10 hover:bg-white/20", className);
+      : cn(
+          "text-white border border-white/20 bg-white/10 hover:bg-white/20",
+          className
+        );
 
   const styleObj =
     variant === "gradient"
-      ? { background: `linear-gradient(90deg, ${PALETTE.left}E0, ${PALETTE.mid}E0 45%, ${PALETTE.right}E0)` }
+      ? {
+          background: `linear-gradient(90deg, ${PALETTE.left}E0, ${PALETTE.mid}E0 45%, ${PALETTE.right}E0)`,
+        }
       : undefined;
 
   return (
