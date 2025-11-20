@@ -9,6 +9,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
+import logo2 from "./assets/logo2.png";
 
 const PALETTE = {
   left: "#127f40",
@@ -45,48 +46,69 @@ export default function Navbar({ user, onLogout = () => {} }) {
   useMotionValueEvent(scrollY, "change", (y) => setCompact(y > 120));
 
   return (
-    <header className="fixed inset-x-0 top-10 z-50 flex justify-center">
-      {/* navbar 5/6 width & centered */}
-      <nav className="w-11/12 max-w-6xl px-3 mx-auto">
-        {/* Glass pill */}
-        <motion.div
-          animate={{
-            width: compact ? "88%" : "100%",
-            y: compact ? 6 : 0,
-            backdropFilter: "blur(16px)",
-          }}
-          transition={{ type: "spring", stiffness: 220, damping: 36 }}
-          className={cn(
-            "mx-auto flex h-14 items-center justify-between rounded-full border px-3 sm:px-4",
-            // CHANGED: solid bg #554110, keep border/ring/shadow
-            "bg-[#554110] border-white/15 ring-1 ring-white/10 shadow-[0_12px_32px_rgba(0,0,0,0.18)]"
-          )}
+    <header className="fixed inset-x-0 top-10 z-50">
+      {/* Mobile navbar - hamburger only */}
+      <div className="lg:hidden flex justify-end px-6">
+        <motion.button
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-amber-500/30 bg-amber-500/20 text-amber-200"
           style={{
-            backgroundColor: "#554110",
+            boxShadow: '0 0 10px rgba(251, 191, 36, 0.3)'
           }}
         >
-          {/* Brand */}
-          <a
+          <motion.div
+            animate={{ rotate: open ? 90 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {open ? <IconX size={18} /> : <IconMenu2 size={18} />}
+          </motion.div>
+        </motion.button>
+      </div>
+
+      {/* Desktop navbar - full width centered */}
+      <nav className="hidden lg:flex justify-center">
+        <motion.div
+          animate={{
+            width: compact ? "auto" : "auto",
+            y: compact ? 6 : 0,
+          }}
+          transition={{ type: "spring", stiffness: 280, damping: 30 }}
+          className={cn(
+            "flex h-12 items-center justify-center gap-8 rounded-full border px-6 backdrop-blur-xl",
+            "bg-amber-950/80 border-amber-500/30"
+          )}
+          style={{
+            boxShadow: '0 0 20px rgba(251, 191, 36, 0.2), 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(251, 191, 36, 0.1)'
+          }}
+        >
+          {/* Brand with Logo */}
+          <motion.a
             href="/"
             className="flex items-center gap-2 rounded-full px-2 py-1"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            <span
-              className="h-6 w-6 rounded-full shadow-inner"
+            <motion.img
+              src={logo2}
+              alt="Robomania 2.0"
+              className="h-7 w-auto object-contain"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
               style={{
-                background: `conic-gradient(from 210deg, ${PALETTE.left}, ${PALETTE.mid} 45%, ${PALETTE.right} 85%, ${PALETTE.left})`,
+                filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.6))'
               }}
             />
-            <img
-              src=""
-              alt="Eventify"
-              width={120}
-              height={40}
-              className="h-6 w-auto object-contain"
-            />
-          </a>
+          </motion.a>
 
           {/* Desktop links */}
-          <ul className="hidden items-center gap-1 lg:flex">
+          <ul className="flex items-center gap-1">
             {navItems.map((item) => {
               const active = pathname === item.link;
               const isPartners = item.name === "Partners";
@@ -94,27 +116,31 @@ export default function Navbar({ user, onLogout = () => {} }) {
               if (!isPartners) {
                 return (
                   <li key={item.link}>
-                    <a
+                    <motion.a
                       href={item.link}
                       aria-current={active ? "page" : undefined}
                       className={cn(
-                        "group relative rounded-full px-3 py-2 text-sm/6 text-white transition-colors",
-                        // CHANGED: hover yellow
-                        "hover:text-yellow-300"
+                        "group relative rounded-full px-3 py-2 text-sm/6 font-medium transition-all duration-300",
+                        active ? "text-amber-400" : "text-amber-100 hover:text-amber-300"
                       )}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       {item.name}
-                      <span
-                        className={cn(
-                          "pointer-events-none absolute inset-x-2 -bottom-1 h-[2px] rounded-full opacity-0 transition-opacity duration-300",
-                          active ? "opacity-100" : "group-hover:opacity-100"
-                        )}
+                      <motion.span
+                        className="pointer-events-none absolute inset-x-2 -bottom-1 h-0.5 rounded-full bg-linear-to-r from-amber-400 via-amber-500 to-amber-600"
+                        initial={{ scaleX: 0, opacity: 0 }}
+                        animate={{ 
+                          scaleX: active ? 1 : 0,
+                          opacity: active ? 1 : 0
+                        }}
+                        whileHover={{ scaleX: 1, opacity: 1 }}
+                        transition={{ duration: 0.3 }}
                         style={{
-                          background: `linear-gradient(90deg, ${PALETTE.left}, ${PALETTE.mid} 50%, ${PALETTE.right})`,
-                          boxShadow: `0 0 10px ${PALETTE.right}88`,
+                          boxShadow: '0 0 10px rgba(251, 191, 36, 0.6)'
                         }}
                       />
-                    </a>
+                    </motion.a>
                   </li>
                 );
               }
@@ -123,36 +149,48 @@ export default function Navbar({ user, onLogout = () => {} }) {
               return (
                 <li key={item.link} className="relative">
                   <div className="group relative">
-                    <a
+                    <motion.a
                       href={item.link}
                       aria-current={active ? "page" : undefined}
                       className={cn(
-                        "relative rounded-full px-3 py-2 text-sm/6 text-white transition-colors",
-                        // CHANGED: hover yellow
-                        "hover:text-yellow-300"
+                        "relative rounded-full px-3 py-2 text-sm/6 font-medium transition-all duration-300",
+                        active ? "text-amber-400" : "text-amber-100 hover:text-amber-300"
                       )}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                     >
                       {item.name}
-                      <span
-                        className={cn(
-                          "pointer-events-none absolute inset-x-2 -bottom-1 h-[2px] rounded-full opacity-0 transition-opacity duration-300",
-                          active ? "opacity-100" : "group-hover:opacity-100"
-                        )}
+                      <motion.span
+                        className="pointer-events-none absolute inset-x-2 -bottom-1 h-0.5 rounded-full bg-linear-to-r from-amber-400 via-amber-500 to-amber-600"
+                        initial={{ scaleX: 0, opacity: 0 }}
+                        animate={{ 
+                          scaleX: active ? 1 : 0,
+                          opacity: active ? 1 : 0
+                        }}
+                        whileHover={{ scaleX: 1, opacity: 1 }}
+                        transition={{ duration: 0.3 }}
                         style={{
-                          background: `linear-gradient(90deg, ${PALETTE.left}, ${PALETTE.mid} 50%, ${PALETTE.right})`,
-                          boxShadow: `0 0 10px ${PALETTE.right}88`,
+                          boxShadow: '0 0 10px rgba(251, 191, 36, 0.6)'
                         }}
                       />
-                    </a>
+                    </motion.a>
 
                     {/* Dropdown */}
-                    <div className="pointer-events-none absolute left-1/2 top-full z-40 mt-2 w-56 -translate-x-1/2 rounded-2xl border border-white/15 bg-black/70 backdrop-blur-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto">
-                      <ul className="py-2 text-sm text-white">
-                        {partnerOptions.map((opt) => (
-                          <li key={opt.link}>
+                    <div 
+                      className="pointer-events-none absolute left-1/2 top-full z-40 mt-2 w-56 -translate-x-1/2 rounded-2xl border border-amber-500/30 bg-amber-950/90 backdrop-blur-xl opacity-0 -translate-y-2.5 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0"
+                      style={{
+                        boxShadow: '0 0 20px rgba(251, 191, 36, 0.2)'
+                      }}
+                    >
+                      <ul className="py-2 text-sm">
+                        {partnerOptions.map((opt, idx) => (
+                          <li 
+                            key={opt.link}
+                            className="transform transition-transform duration-200 hover:translate-x-1"
+                          >
                             <a
                               href={opt.link}
-                              className="block px-3 py-1.5 text-white hover:text-yellow-300 hover:bg-white/10"
+                              className="block px-3 py-2 text-amber-100 hover:text-amber-300 hover:bg-amber-500/20 transition-all duration-200 rounded-lg mx-1"
                             >
                               {opt.name}
                             </a>
@@ -165,102 +203,103 @@ export default function Navbar({ user, onLogout = () => {} }) {
               );
             })}
           </ul>
-
-          {/* Right: only burger (auth removed) */}
-          <div className="flex items-center gap-2">
-            {/* Mobile toggle */}
-            <button
-              type="button"
-              aria-label="Toggle menu"
-              aria-expanded={open}
-              onClick={() => setOpen((v) => !v)}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white lg:hidden"
-            >
-              {open ? <IconX size={18} /> : <IconMenu2 size={18} />}
-            </button>
-          </div>
         </motion.div>
+      </nav>
 
-        {/* Mobile sheet */}
-        <AnimatePresence>
+      {/* Mobile sheet */}
+      <AnimatePresence>
           {open && (
             <motion.div
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              className="mx-auto mt-2 rounded-3xl border border-white/15 bg-[#554110] p-2 ring-1 ring-white/10 backdrop-blur-xl lg:hidden"
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="mx-auto mt-2 w-11/12 max-w-md rounded-3xl border border-amber-500/30 bg-amber-950/90 p-3 backdrop-blur-xl"
               style={{
-                // CHANGED: solid background #554110
-                backgroundColor: "#554110",
+                boxShadow: '0 0 30px rgba(251, 191, 36, 0.3)'
               }}
             >
               <ul className="grid gap-1">
-                {navItems.map((item) => {
+                {navItems.map((item, index) => {
                   const active = pathname === item.link;
                   const isPartners = item.name === "Partners";
 
                   if (!isPartners) {
                     return (
-                      <li key={`m-${item.link}`}>
+                      <motion.li 
+                        key={`m-${item.link}`}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
                         <a
                           href={item.link}
                           onClick={() => setOpen(false)}
                           className={cn(
-                            "flex items-center justify-between rounded-2xl px-3 py-2 text-base transition",
-                            // CHANGED: white text, yellow hover
-                            "text-white hover:text-yellow-300 hover:bg-white/10"
+                            "flex items-center justify-between rounded-2xl px-4 py-3 text-base font-medium transition-all duration-200",
+                            active ? "text-amber-300 bg-amber-500/20" : "text-amber-100 hover:text-amber-300 hover:bg-amber-500/10"
                           )}
                         >
                           {item.name}
-                          <span
-                            className={cn(
-                              "h-2 w-2 rounded-full",
-                              active ? "" : "opacity-0"
-                            )}
-                            style={{
-                              background: `radial-gradient(circle, ${PALETTE.right}, ${PALETTE.mid})`,
-                            }}
-                          />
+                          {active && (
+                            <motion.span
+                              className="h-2 w-2 rounded-full bg-amber-400"
+                              animate={{ scale: [1, 1.2, 1] }}
+                              transition={{ repeat: Infinity, duration: 2 }}
+                              style={{
+                                boxShadow: '0 0 10px rgba(251, 191, 36, 0.8)'
+                              }}
+                            />
+                          )}
                         </a>
-                      </li>
+                      </motion.li>
                     );
                   }
 
                   // Mobile: Partners + its options
                   return (
                     <React.Fragment key={`m-${item.link}`}>
-                      <li>
+                      <motion.li
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
                         <a
                           href={item.link}
                           onClick={() => setOpen(false)}
                           className={cn(
-                            "flex items-center justify-between rounded-2xl px-3 py-2 text-base transition",
-                            // CHANGED: white text, yellow hover
-                            "text-white hover:text-yellow-300 hover:bg-white/10"
+                            "flex items-center justify-between rounded-2xl px-4 py-3 text-base font-medium transition-all duration-200",
+                            active ? "text-amber-300 bg-amber-500/20" : "text-amber-100 hover:text-amber-300 hover:bg-amber-500/10"
                           )}
                         >
                           {item.name}
-                          <span
-                            className={cn(
-                              "h-2 w-2 rounded-full",
-                              active ? "" : "opacity-0"
-                            )}
-                            style={{
-                              background: `radial-gradient(circle, ${PALETTE.right}, ${PALETTE.mid})`,
-                            }}
-                          />
+                          {active && (
+                            <motion.span
+                              className="h-2 w-2 rounded-full bg-amber-400"
+                              animate={{ scale: [1, 1.2, 1] }}
+                              transition={{ repeat: Infinity, duration: 2 }}
+                              style={{
+                                boxShadow: '0 0 10px rgba(251, 191, 36, 0.8)'
+                              }}
+                            />
+                          )}
                         </a>
-                      </li>
-                      {partnerOptions.map((opt) => (
-                        <li key={`m-${opt.link}`}>
+                      </motion.li>
+                      {partnerOptions.map((opt, optIdx) => (
+                        <motion.li 
+                          key={`m-${opt.link}`}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: (index + optIdx + 1) * 0.1 }}
+                        >
                           <a
                             href={opt.link}
                             onClick={() => setOpen(false)}
-                            className="flex items-center justify-between rounded-2xl px-5 py-2 text-sm text-white hover:text-yellow-300 hover:bg-white/10"
+                            className="flex items-center justify-between rounded-2xl px-6 py-2 text-sm text-amber-100 hover:text-amber-300 hover:bg-amber-500/10 transition-all duration-200"
                           >
                             {opt.name}
                           </a>
-                        </li>
+                        </motion.li>
                       ))}
                     </React.Fragment>
                   );
@@ -269,8 +308,7 @@ export default function Navbar({ user, onLogout = () => {} }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </nav>
-    </header>
+      </header>
   );
 }
 
