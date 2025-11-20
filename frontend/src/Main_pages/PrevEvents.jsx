@@ -7,10 +7,10 @@ import { useNavigate } from "react-router-dom";
 const previousEvents = [
   {
     id: 1,
-    title: "ARC 2022",
+    title: "AUST ROVER CHALLENGE 1.0",
     subtitle: "The Inaugural Event",
     year: "2022",
-    banner: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
+    banner: "https://ik.imagekit.io/mekt2pafz/arc%201.0/banner%201.0?w=800&q=80",
     stats: [
       { value: "95+", label: "Teams" },
       { value: "25+", label: "Unis" },
@@ -22,29 +22,34 @@ const previousEvents = [
       {
         name: "Rover",
         images: [
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/rover%20competition%20moment-1.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/rover%20competition%20moment-2.jpg?w=600",
         ],
       },
       {
         name: "Soccer Bot",
         images: [
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600",
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/soccer%20bot%20moment%20-3%20(1).jpg",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/soccer%20bot%20moment%20-2%20(1).jpg",
+          "https://ik.imagekit.io/mekt2pafz/_MG_4488.jpg"
         ],
       },
       {
         name: "Line Follower",
         images: [
-          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600",
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/lfr%20moment%20-2%20(1).jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/lfr%20moment%20-1%20(1).jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/lfr%20moment%20-3.jpg?w=600",
         ],
       },
+      
       {
         name: "Hardware",
         images: [
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/Project%20showcase%20moment%20-1.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/Project%20showcase%20moment%20-3.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/arc%201.0/Project%20showcase%20moment%20-2.jpg?w=600",
+          
         ],
       },
     ],
@@ -54,7 +59,7 @@ const previousEvents = [
     title: "Robomania 1.0",
     subtitle: "Season One",
     year: "2024",
-    banner: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+    banner: "https://ik.imagekit.io/mekt2pafz/485658163_695759766349341_2156621265921599892_n.jpg?w=800&q=80",
     stats: [
       { value: "200+", label: "Students" },
       { value: "1", label: "Uni" },
@@ -66,29 +71,32 @@ const previousEvents = [
       {
         name: "Line Follower",
         images: [
-          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600",
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
+          "https://ik.imagekit.io/mekt2pafz/lfr%20moment%20-1.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/lfr%20moment%20-2.jpg?w=600",
         ],
       },
       {
         name: "Robo Fight",
         images: [
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
+          "https://ik.imagekit.io/mekt2pafz/boot%20fight%20moment%20-2.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/boot%20fight%20moment%20-1.jpg?w=600",
         ],
       },
       {
         name: "Project",
         images: [
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600",
+          "https://ik.imagekit.io/mekt2pafz/project%20show%20case%20moment%20-4.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/project%20show%20case%20moment%20-5.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/project%20show%20case%20moment%20-2.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/project%20show%20case%20moment%20-1.jpg?w=600",
         ],
       },
       {
         name: "Soccer Bot",
         images: [
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600",
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
+          "https://ik.imagekit.io/mekt2pafz/soccer%20bot%20moment%20-3.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/soccer%20bot%20moment%20-2.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/soccer%20bot%20moment%20-1.jpg?w=600",
         ],
       },
     ],
@@ -98,7 +106,7 @@ const previousEvents = [
     title: "ARC 2.0",
     subtitle: "Expanded Edition",
     year: "2025",
-    banner: "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&q=80",
+    banner: "https://ik.imagekit.io/mekt2pafz/1000032065%20(1).jpg?w=800&q=80",
     stats: [
       { value: "500+", label: "People" },
       { value: "31+", label: "Unis" },
@@ -110,36 +118,41 @@ const previousEvents = [
       {
         name: "Rover",
         images: [
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
+          "https://ik.imagekit.io/mekt2pafz/DSCF3224.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/DSCF3219.jpg?w=600",
         ],
       },
       {
         name: "Soccer Bot",
         images: [
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600",
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
+          "https://ik.imagekit.io/mekt2pafz/_MG_4041.jpg",
+          "https://ik.imagekit.io/mekt2pafz/_MG_4084.jpg",
+          "https://ik.imagekit.io/mekt2pafz/_MG_4488.jpg"
         ],
       },
       {
         name: "Line Follower",
         images: [
-          "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600",
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
+          "https://ik.imagekit.io/mekt2pafz/IMG_6371.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/IMG_6380.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/IMG_6380.jpg?w=600",
         ],
       },
       {
-        name: "Project",
+        name: "Robo Olympiad",
         images: [
-          "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600",
-          "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600",
+          "https://ik.imagekit.io/mekt2pafz/_MG_4363%20(1).jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/_MG_4327.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/_MG_4358.jpg?w=600",
         ],
       },
       {
-        name: "Olympiad",
+        name: "Hardware",
         images: [
-          "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=600",
-          "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600",
+          "https://ik.imagekit.io/mekt2pafz/DSCF3211.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/DSCF3210.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/DSCF3277.jpg?w=600",
+          "https://ik.imagekit.io/mekt2pafz/DSCF2918.jpg"
         ],
       },
     ],
