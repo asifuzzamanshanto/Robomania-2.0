@@ -119,7 +119,7 @@ const OurGrossReach = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.25 }}
-              className="rounded-3xl border border-[#D1BA83]/60 bg-gradient-to-br from-[#050506]/90 to-[#1a0f00]/60 p-6 shadow-[0_0_40px_rgba(245,203,122,0.1)] h-fit"
+              className="backdrop-blur-sm rounded-3xl border border-[#D1BA83]/60 bg-gradient-to-br from-[#050506]/90 to-[#1a0f00]/60 p-6 shadow-[0_0_40px_rgba(245,203,122,0.1)] h-fit"
             >
               <div className="flex items-center justify-between gap-3">
                 <div>
@@ -186,7 +186,7 @@ const OurGrossReach = () => {
         </header>
 
         {/* -------- MAIN ANALYTICS GRID -------- */}
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3 backdrop-blur-sm">
           {/* Left column (2/3 width on desktop) */}
           <div className="space-y-6 lg:col-span-2">
             {/* Engagement & Interactions */}
@@ -201,7 +201,7 @@ const OurGrossReach = () => {
             </div>
 
             {/* Views & Conversations */}
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-2 backdrop-blur-sm">
               <MetricCard
                 title="Views Breakdown"
                 badge="Followers vs Non-followers"
