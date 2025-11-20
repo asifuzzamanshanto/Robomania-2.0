@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 // BG image link (replace with your cloudinary URL)
-const evbgImage = "https://res.cloudinary.com/demo/image/upload/sample-event-banner.jpg";
+const evbgImage = "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/evbg.png?updatedAt=1763665401046";
 
 // Segment logo URLs (replace with your own)
 const segments = [
