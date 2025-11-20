@@ -13,6 +13,7 @@ import Platinum from './Main_pages/Partners/Platinum.jsx';
 import Premium from './Main_pages/Partners/Premium.jsx';
 import Supporting from './Main_pages/Partners/Supporting.jsx';
 import { DotBackground } from './components/ui/DotBackground.jsx';
+import Footer from './Footer.jsx';
 function App() {
   return (
    <BrowserRouter>
@@ -31,6 +32,7 @@ function App() {
             <Route path="/about-us" element={<About />} />
           </Routes>
         </div>
+        <Footer/>
     </DotBackground>
     </BrowserRouter>
   )
