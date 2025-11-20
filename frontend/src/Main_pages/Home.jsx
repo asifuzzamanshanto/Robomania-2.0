@@ -1065,57 +1065,36 @@ const Home = () => {
                 <span>AUST Robotics Club · Intra AUST Robotics Competition</span>
               </motion.div>
 
+              {/* Accessible heading (hidden visually) */}
               <motion.h1
-                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                className="sr-only"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
               >
-                <span
-                  className="relative inline-block bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent"
-                  style={{
-                    textShadow: "0 0 80px rgba(251, 191, 36, 0.5)",
-                  }}
-                >
-                  Robomania
-                  <motion.span
-                    className="absolute inset-0 bg-linear-to-r from-amber-300 via-amber-400 to-amber-500 bg-clip-text text-transparent blur-xl opacity-50"
-                    animate={{
-                      opacity: [0.3, 0.6, 0.3],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    Robomania
-                  </motion.span>
-                </span>
+                Robomania 2.0
               </motion.h1>
 
+              {/* 🔥 Hero image instead of text Robomania 2.0 */}
               <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className="relative mt-2"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className="relative flex justify-center"
               >
-                <span
-                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black bg-linear-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent"
-                  style={{
-                    textShadow: "0 0 60px rgba(251, 191, 36, 0.4)",
-                  }}
-                >
-                  2.0
-                </span>
+                <img
+                  src="https://ik.imagekit.io/mekt2pafz/Robomania%202.0/Robomania%20LOGO.png"
+                  // You can also use your uploaded file path after placing it in public, e.g.:
+                  // src="/25ba0237-80d5-4848-a8d2-54a54e57fd1f.png"
+                  alt="Robomania 2.0 – Intra AUST Robotics Competition"
+                  className="w-full max-w-[720px] h-auto object-contain drop-shadow-[0_0_35px_rgba(251,191,36,0.75)]"
+                />
 
-                <motion.div
-                  className="absolute -bottom-2 left-1/2 -translate-x-1/2 h-1 bg-linear-to-r from-transparent via-amber-400 to-transparent rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: "80%" }}
-                  transition={{ duration: 0.8, delay: 1 }}
+                {/* soft glow under image */}
+                <div
+                  className="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 w-[75%] h-1 rounded-full bg-linear-to-r from-transparent via-amber-400/70 to-transparent"
                   style={{
-                    boxShadow: "0 0 20px rgba(251, 191, 36, 0.8)",
+                    boxShadow: "0 0 25px rgba(251,191,36,0.8)",
                   }}
                 />
               </motion.div>
@@ -1362,8 +1341,6 @@ const Home = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="relative"
           >
-            {/*
-            <PartnersCarousel />*/}
             <PartnersShowcase />
           </motion.div>
         </div>
