@@ -221,8 +221,8 @@ const OurGrossReach = () => {
           </div>
 
           {/* Right column */}
-          <div className="space-y-6">
-            {/* Age & Gender Pie */}
+          <div className="space-y-6 flex flex-col">
+            {/* Age & Gender Pie - Aligned with Interaction Overview */}
             <MetricCard title="Age & Gender Split" badge="Audience snapshot" index={4}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -282,7 +282,7 @@ const OurGrossReach = () => {
               </motion.p>
             </MetricCard>
 
-            {/* Message Contacts */}
+            {/* Message Contacts - Aligned with Messaging Conversations Started */}
             <MetricCard title="Message Contacts" badge="Organic outreach" index={5}>
               <dl className="grid grid-cols-2 gap-3 text-[13px] mb-2">
                 <div className="rounded-2xl bg-gradient-to-br from-black/40 to-[#1AB7AA]/5 p-3 border border-[#1AB7AA]/20">
