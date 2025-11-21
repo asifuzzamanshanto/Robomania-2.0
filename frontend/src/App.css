@@ -2,18 +2,21 @@
 
 @theme inline {
   --animate-aurora: aurora 60s linear infinite;
-@keyframes auroraFloat {
-  0% {
-    transform: translate3d(-8%, -6%, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(6%, 4%, 0) scale(1.08);
-  }
-  100% {
-    transform: translate3d(-4%, 10%, 0) scale(0.97);
+  
+  @keyframes auroraFloat {
+    0% {
+      transform: translate3d(-8%, -6%, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(6%, 4%, 0) scale(1.08);
+    }
+    100% {
+      transform: translate3d(-4%, 10%, 0) scale(0.97);
+    }
   }
 }
 
+/* Selectors moved outside @theme */
 .aurora-shape {
   animation: auroraFloat 18s ease-in-out infinite alternate;
 }
@@ -22,13 +25,20 @@
   animation: auroraFloat 26s ease-in-out infinite alternate;
 }
 
-}
-
 @theme {
-  /* Make Noto Sans KR the default sans font for `font-sans` */
   --font-sans: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-
-  /* Optional: separate utility `font-noto-kr` if you want */
   --font-noto-kr: "Noto Sans KR", system-ui, sans-serif;
+}
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.animate-aurora {
+  animation: aurora 60s linear infinite;
 }
