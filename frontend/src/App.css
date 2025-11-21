@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
+/* ---------- THEME: inline animation token ---------- */
 @theme inline {
   --animate-aurora: aurora 60s linear infinite;
+}
+
+/* ---------- AURORA FLOAT KEYFRAMES & CLASSES ---------- */
 @keyframes auroraFloat {
   0% {
     transform: translate3d(-8%, -6%, 0) scale(1);
@@ -22,8 +26,7 @@
   animation: auroraFloat 26s ease-in-out infinite alternate;
 }
 
-}
-
+/* ---------- THEME: font tokens ---------- */
 @theme {
   /* Make Noto Sans KR the default sans font for `font-sans` */
   --font-sans: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont,
