@@ -95,7 +95,7 @@ export default function Navbar({ user, onLogout = () => {} }) {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <motion.img
-              src={logo2}
+              src={"https://ik.imagekit.io/mekt2pafz/logo2.png"}
               alt="Robomania 2.0"
               className="h-7 w-auto object-contain"
               initial={{ opacity: 0, x: -20 }}

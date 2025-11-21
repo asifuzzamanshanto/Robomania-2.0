@@ -9,17 +9,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import PartnersShowcase  from "./PartnersShowcase.jsx";
-import cadysseyImg from "../assets/Cadyssey.png";
-import circuitWizardryImg from "../assets/CIRCUITWizardy.png";
-import hackathonImg from "../assets/RoboProjectHackathon(2).png";
-import innovatorsArenaImg from "../assets/Innovatorsarena.png";
-import lineFollowingImg from "../assets/LineFollowingRobot.png";
-import soccerbotImg from "../assets/SoccerBot.png";
-import adCanvasImg from "../assets/ADCanvas.png";
-import premierPartnerImg from "../assets/PremierPartner.png";
-import platinumPartnerImg from "../assets/PlatinumPartner.png";
-import goldPartnerImg from "../assets/GoldPartner.jfif";
-import supportingPartnerImg from "../assets/SupportingPartner.png";
+
 import PrevEvents from "./PrevEvents.jsx";
 
 /* -------------------------------------------------------------------------- */
@@ -33,7 +23,7 @@ const SEGMENTS_DATA = [
     subtitle: "Speed, Precision & Algorithm Mastery",
     description:
       "In the Line Following Robot challenge, participants will build a robot capable of autonomously navigating a path marked with lines. Perfect for those who want to test their engineering and programming skills in a fun and competitive setting.",
-    imageUrl: lineFollowingImg,
+    imageUrl: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
     ctaLabel: "Explore More",
     icon: Zap,
   },
@@ -43,7 +33,7 @@ const SEGMENTS_DATA = [
     subtitle: "Strategic Gameplay & Autonomous Control",
     description:
       "Join us in the Soccer Bot Challenge, where robotics and soccer meet. Teams will design and program autonomous robots that can kick a ball and score goals. Test your creativity and technical skills while competing to become the ultimate soccer bot champions.",
-    imageUrl: soccerbotImg,
+    imageUrl: "https://ik.imagekit.io/mekt2pafz/SoccerBot.png",
     ctaLabel: "Explore More",
     icon: Trophy,
   },
@@ -53,7 +43,7 @@ const SEGMENTS_DATA = [
     subtitle: "3D Modeling & Engineering Design",
     description:
       "In the CAD Design segment, participants will create precise digital models of mechanical or electrical systems using CAD software. Ideal for those who want to sharpen their 3D design skills and gain a deeper understanding of engineering designs in the virtual space.",
-    imageUrl: cadysseyImg,
+    imageUrl: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
     ctaLabel: "Explore More",
     icon: Zap,
   },
@@ -63,7 +53,7 @@ const SEGMENTS_DATA = [
     subtitle: "Electronics Design & PCB Innovation",
     description:
       "Circuit Wizardry is a challenge designed for those with a passion for electrical engineering. Teams will solve complex circuit problems, testing their knowledge in circuit design, troubleshooting and optimization.",
-    imageUrl: circuitWizardryImg,
+    imageUrl: "https://ik.imagekit.io/mekt2pafz/CIRCUITWizardy.png",
     ctaLabel: "Explore More",
     icon: Trophy,
   },
@@ -73,7 +63,7 @@ const SEGMENTS_DATA = [
     subtitle: "Code, Innovate & Build Solutions",
     description:
       "The Mini Robotics Hackathon is a fast-paced event where participants will work on building mini robots under tight deadlines. With limited resources and time, this event challenges your problem-solving and quick-thinking abilities.",
-    imageUrl: hackathonImg,
+    imageUrl: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
     ctaLabel: "Explore More",
     icon: Zap,
   },
@@ -83,7 +73,7 @@ const SEGMENTS_DATA = [
     subtitle: "Project Showcase & Innovation Display",
     description:
       "The Project Showcase gives participants the chance to display their innovative robotics projects. Whether it's an individual or team effort, this is the platform to showcase your creativity, design skills and problem-solving abilities to a wider audience.",
-    imageUrl: innovatorsArenaImg,
+    imageUrl: "https://ik.imagekit.io/mekt2pafz/Innovatorsarena.png",
     ctaLabel: "Explore More",
     icon: Trophy,
   },
@@ -93,7 +83,7 @@ const SEGMENTS_DATA = [
     subtitle: "Creative Design & Marketing Excellence",
     description:
       "The AD Canvas segment is a unique opportunity to explore the intersection of robotics and storytelling. Participants will design creative campaigns that use robotics to attract attention and engage audiences.",
-    imageUrl: adCanvasImg,
+    imageUrl: "https://ik.imagekit.io/mekt2pafz/ADCanvas.png",
     ctaLabel: "Explore More",
     icon: Zap,
   },
