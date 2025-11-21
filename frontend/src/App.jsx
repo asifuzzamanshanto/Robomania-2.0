@@ -7,20 +7,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from './Main_pages/About.jsx';
 import Segments from './Main_pages/Segments.jsx';
 import Activites from './Main_pages/Activites.jsx';
+import OurGrossReach from './Main_pages/OurGrossReach.jsx';
 import Gold from './Main_pages/Partners/Gold.jsx';
 import Platinum from './Main_pages/Partners/Platinum.jsx';
 import Premium from './Main_pages/Partners/Premium.jsx';
 import Supporting from './Main_pages/Partners/Supporting.jsx';
-
-import Event from './Main_pages/Event.jsx';
-import PrevEvents from './Main_pages/PrevEvents.jsx';
-
+import { DotBackground } from './components/ui/DotBackground.jsx';
+import Footer from './Footer.jsx';
 function App() {
   return (
    <BrowserRouter>
-    <AuroraBackground>
+    <DotBackground>
        <Navbar />
-        <div className="relative z-10 w-full pt-20">
+        <div className="relative  w-full pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/activities" element={<Activites/>} />
@@ -29,13 +28,12 @@ function App() {
             <Route path="/partners/premium" element={<Premium/>} />
             <Route path="/partners/supporting" element={<Supporting/>} />
             <Route path="/segments" element={<Segments/>} />
+            <Route path="/our-gross-reach" element={<OurGrossReach/>} />
             <Route path="/about-us" element={<About />} />
-           
-            <Route path="/previous-events" element={<PrevEvents />} />
-            <Route path="/event" element={<Event />} />
           </Routes>
         </div>
-    </AuroraBackground>
+        <Footer/>
+    </DotBackground>
     </BrowserRouter>
   )
 }
