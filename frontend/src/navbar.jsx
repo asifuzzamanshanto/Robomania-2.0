@@ -9,7 +9,6 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-import logo2 from "./assets/logo2.png";
 
 const PALETTE = {
   left: "#127f40",
