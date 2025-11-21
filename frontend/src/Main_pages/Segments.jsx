@@ -4,19 +4,13 @@ import { motion } from "framer-motion";
 import { ChevronDown, X } from "lucide-react";
 
 // Import segment images
-import SoccerBotImg from "../assets/Images/Soccer_Bot.png";
-import LineFollowingImg from "../assets/Images/Line_Following_Robot.png";
-import InnovatorsImg from "../assets/Images/Innovators_arena.png";
-import CircuitWizardryImg from "../assets/Images/CIRCUIT_Wizardy.png";
-import CadysseyImg from "../assets/Images/Cadyssey.png";
-import RoboProjectImg from "../assets/Images/RoboProject_Hackathon.png";
-import ADCanvasImg from "../assets/Images/ADCanvas.png";
+
 
 const segmentsData = [
   {
     id: 1,
     name: "Soccer Bot Challenge",
-    image: SoccerBotImg,
+    image: "https://ik.imagekit.io/mekt2pafz/SoccerBot.png",
     shortDescription:
       "Join us in the Soccer Bot Challenge, where robotics and soccer meet. Teams will design and program autonomous robots that can kick a ball and score goals. Test your creativity and technical skills while competing to become the ultimate soccer bot champions.",
     detailedDescription:
@@ -25,7 +19,7 @@ const segmentsData = [
   {
     id: 2,
     name: "Line Following Robot",
-    image: LineFollowingImg,
+    image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
     shortDescription:
       "In the Line Following Robot challenge, participants will build a robot capable of autonomously navigating a path marked with lines. Perfect for those who want to test their engineering and programming skills in a fun and competitive setting.",
     detailedDescription:
@@ -34,7 +28,7 @@ const segmentsData = [
   {
     id: 3,
     name: "Innovators' Arena",
-    image: InnovatorsImg,
+    image: "https://ik.imagekit.io/mekt2pafz/Innovatorsarena.png",
     shortDescription:
       "The Project Showcase gives participants the chance to display their innovative robotics projects. Whether it's an individual or team effort, this is the platform to showcase your creativity, design skills and problem-solving abilities to a wider audience.",
     detailedDescription:
@@ -43,7 +37,7 @@ const segmentsData = [
   {
     id: 4,
     name: "Circuit Wizardry",
-    image: CircuitWizardryImg,
+    image: "https://ik.imagekit.io/mekt2pafz/CIRCUITWizardy.png",
     shortDescription:
       "Circuit Solve is a challenge designed for those with a passion for electrical engineering. Teams will solve complex circuit problems, testing their knowledge in circuit design, troubleshooting and optimization. A great way to put your theoretical learning into practical use.",
     detailedDescription:
@@ -52,7 +46,7 @@ const segmentsData = [
   {
     id: 5,
     name: "Cadyssey",
-    image: CadysseyImg,
+    image: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
     shortDescription:
       "In the CAD Design segment, participants will create precise digital models of mechanical or electrical systems using CAD software. Ideal for those who want to showcase their 3D design skills and gain a deeper understanding of engineering designs in the virtual space.",
     detailedDescription:
@@ -61,7 +55,7 @@ const segmentsData = [
   {
     id: 6,
     name: "RoboProject Hackathon",
-    image: RoboProjectImg,
+    image: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
     shortDescription:
       "The Mini Robotics Hackathon is a fast-paced event where participants will work on building mini robots under tight deadlines. With limited resources and time, this event challenges your problem-solving and quick-thinking abilities.",
     detailedDescription:
@@ -70,7 +64,7 @@ const segmentsData = [
   {
     id: 7,
     name: "ADCanvas",
-    image: ADCanvasImg,
+    image: "https://ik.imagekit.io/mekt2pafz/ADCanvas.png",
     shortDescription:
       "The AD Segment is a unique opportunity to explore the intersection of robotics and advertising. Participants will design creative ad campaigns utilizing robotics technology to attract attention and engage audiences.",
     detailedDescription:
