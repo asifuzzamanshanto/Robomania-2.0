@@ -120,7 +120,7 @@ const PartnershipMatrix = () => {
       </div>
 
       {/* Legend */}
-      <div className="mx-auto mt-4 flex max-w-5xl flex-wrap items-center gap-4 text-[12px] text-[#5A4520]">
+      <div className="mx-auto mt-4 flex max-w-5xl flex-wrap items-center gap-4 text-[12px] text-white font-bold">
         <div className="flex items-center gap-2">
           <span className="text-[16px]">✅</span>
           <span>Included</span>

@@ -57,27 +57,27 @@ const workshops = [
   {
     title: "PCB Design Workshop",
     desc: "End-to-end journey from schematic to layout optimization and fabrication.",
-    image: "/images/about/workshops/pcb-design.jpg",
+    image: "https://aust.edu/storage/files/8d9SsRHO4Rcfmu4sGnLJNakx916tpa36G4BZqpYl.jpg",
   },
   {
     title: "Robotic Arm Workshop",
     desc: "Mechanism, kinematics and motion control with sensors and microcontrollers.",
-    image: "/images/about/workshops/robotic-arm.jpg",
+    image: "https://aust.edu/storage/files/dyHnxxhWTC8vX8ou5uWeSjFIWDAEHzMf0WkZlTiT.jpg",
   },
   {
     title: "IoT & Automation Workshop",
     desc: "Smart systems combining sensors, actuators and cloud-connected controllers.",
-    image: "/images/about/workshops/iot-automation.jpg",
+    image: "https://aust.edu/storage/files/9pMxQnQCKlHFjKbAhNh6kQ4r9PpZINqik4vzzKYo.jpg",
   },
   {
     title: "Drone Technology Workshop",
     desc: "UAV design, aerodynamics, propeller choice and flight control basics.",
-    image: "/images/about/workshops/drone-tech.jpg",
+    image: "https://aust.edu/storage/files/OyldmWpRfajcamGP9oaM6fj3XZPHYsVHZovTTM4i.jpg",
   },
   {
     title: "Firefighting Robot Workshop",
     desc: "Autonomous hazard-detecting robots built in team-based project sprints.",
-    image: "/images/about/workshops/firefighting-robot.jpg",
+    image: "https://aust.edu/storage/files/lLhKxAVqn0oWbckJLf01XKy3MQp5nx5H2ppLPDSo.png",
   },
 ];
 
@@ -110,21 +110,21 @@ const previousEvents = [
     subtitle: "National Robotics Competition",
     desc: "First-ever ARC with four competitive segments – Rover, Soccer Bot, Line Follower and Hardware Showcase.",
     highlight: "Multi-segment national robotics fest hosted at AUST.",
-    image: "/images/about/events/arc-2022.jpg",
+    image: "https://ik.imagekit.io/mekt2pafz/arc%201.0/banner%201.0?updatedAt=1763666844586",
   },
   {
     title: "AUST Rover Challenge 2.0 (2025)",
     subtitle: "31+ Universities · 500+ Competitors",
     desc: "A landmark national event across five segments with a BDT 1.5+ lakh prize pool.",
     highlight: "One of Bangladesh’s largest university-level rover competitions.",
-    image: "/images/about/events/arc-2025.jpg",
+    image: "https://ik.imagekit.io/mekt2pafz/1000032065%20(1).jpg?updatedAt=1763661292408",
   },
   {
     title: "Robomania 1.0 (2024)",
     subtitle: "Intra AUST Robotics Festival",
     desc: "An intra-university fest giving AUST students their first competitive robotics arena with 200+ participants.",
     highlight: "BDT 33,000 prize pool and multiple exciting segments.",
-    image: "/images/about/events/robomania-1-0.jpg",
+    image: "https://ik.imagekit.io/mekt2pafz/485658163_695759766349341_2156621265921599892_n.jpg?updatedAt=1763661767040",
   },
 ];
 

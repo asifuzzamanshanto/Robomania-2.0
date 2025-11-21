@@ -18,7 +18,7 @@ export const AutoImageCarousel = ({ images = [], className }) => {
   return (
     <div
       className={cn(
-        "relative w-full h-48 overflow-hidden rounded-lg",
+        "relative w-full h-56 overflow-hidden rounded-lg",
         className
       )}
     >

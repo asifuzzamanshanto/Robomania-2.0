@@ -5,36 +5,36 @@ import PartnershipMatrix from "./PartnershipMatrix";
 
 const premiumSponsors = [
   {
-    name: "TechNova Industries",
-    tagline: "Innovation Partner",
-    logo: "/sponsors/technova.png",
+    name: "Prime Bank",
+    tagline: "ARC 2.0 (2025)",
+    logo: "https://www.primebank.com.bd/web/new_assets/assets/images/new-logo-en.png",
   },
   {
-    name: "RoboVerse Labs",
-    tagline: "AI & Robotics Partner",
-    logo: "/sponsors/roboverselabs.png",
+    name: "Ispahani Limited",
+    tagline: "ARC 1.0 (2022)",
+    logo: "https://www.ispahanifoods.com/wp-content/uploads/2019/10/logo.png",
   },
   {
-    name: "CircuitCloud",
-    tagline: "Cloud & DevOps Partner",
-    logo: "/sponsors/circuitcloud.png",
+    name: "Ulterior Engineering Intl.",
+    tagline: "ROBOMANIA 1.0 ",
+    logo: "https://scontent.fdac138-2.fna.fbcdn.net/v/t39.30808-6/471852262_610576054806180_1030698770042489876_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_p2X42aiafkQ7kNvwGHvqXJ&_nc_oc=AdniX2raKE7K29qIhcQT33DHJVdJ2XC1cHaVawcew8iwL1Ig2VbjR-HClk0gcAW8Bcs&_nc_zt=23&_nc_ht=scontent.fdac138-2.fna&_nc_gid=XUiVLPshsKbl8OUBdP3yfw&oh=00_AfgTOSRjBYYAXg2i1swejAg_zrGlri3AxDsg60JTPVMnrQ&oe=692638A7",
   },
 ];
 // e.g. put this in PremiumContents.jsx or directly in Premium.jsx
+// PremiumContents.jsx
 export const premiumContents = [
   {
     id: 1,
     content: () => (
       <div className="space-y-3">
         <p>
-          As the <span className="font-semibold">Title / Powered By Partner</span>,
-          your brand becomes the primary name associated with Robomania 2.0.
+          As the <span className="font-semibold">Premier Partner</span>, your brand receives
+          exclusive title placement across the event.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Title lock-up on all major event collaterals.</li>
-          <li>Stage, backdrop, and opening/closing ceremony mentions.</li>
-          <li>Priority placement on website, socials, and digital materials.</li>
-          <li>Verbal acknowledgment in key sessions and prize-giving.</li>
+          <li>Featured as the primary “Premier Partner” / title credit.</li>
+          <li>“Titled By” lock-up on core event materials and key touchpoints.</li>
+          <li>Strong, long-term association with the event’s core identity.</li>
         </ul>
       </div>
     ),
@@ -44,12 +44,13 @@ export const premiumContents = [
     content: () => (
       <div className="space-y-3">
         <p>
-          Get strong visibility in all high-traffic zones throughout the event.
+          Gain <span className="font-semibold">high-impact brand visibility</span> across
+          on-ground and promotional assets.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Logo on LED screens between matches and sessions.</li>
-          <li>Placement on welcome arch, registration desk, and help desks.</li>
-          <li>Inclusion in official recap posts and highlight reels.</li>
+          <li>Logo on banners, backdrops, and key event posters.</li>
+          <li>Presence on LED screens, standees, and major on-site touchpoints.</li>
+          <li>Integration into select digital and printed communications.</li>
         </ul>
       </div>
     ),
@@ -59,13 +60,13 @@ export const premiumContents = [
     content: () => (
       <div className="space-y-3">
         <p>
-          Place your brand directly in participants’ hands through event
-          materials.
+          Use a <span className="font-semibold">dedicated booth</span> to build meaningful,
+          face-to-face engagement.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Logo on participant kit boxes / bags.</li>
-          <li>Branding on certificates, ID cards, and lanyards (tier-based).</li>
-          <li>Option to include flyers, coupons, or small branded goodies.</li>
+          <li>Two full days of booth presence inside the event area.</li>
+          <li>Space for demos, product displays, and interaction zones.</li>
+          <li>Opportunities to collect leads and feedback from participants.</li>
         </ul>
       </div>
     ),
@@ -75,13 +76,13 @@ export const premiumContents = [
     content: () => (
       <div className="space-y-3">
         <p>
-          Strategic logo placement ensures that your brand appears in photos,
-          media, and attendee memories.
+          Unlock <span className="font-semibold">exclusive engagement time</span> with a focused
+          audience.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Placement on main event backdrop and zone-specific standees.</li>
-          <li>Logo wall for partner recognition and photo moments.</li>
-          <li>Coverage in printed and digital partner panels.</li>
+          <li>Three hours of dedicated event time reserved for your brand.</li>
+          <li>Run tech talks, workshops, or live demonstrations.</li>
+          <li>Shape the session format to match your campaign objectives.</li>
         </ul>
       </div>
     ),
@@ -90,11 +91,14 @@ export const premiumContents = [
     id: 5,
     content: () => (
       <div className="space-y-3">
-        <p>Go beyond logo placement and actually talk to the community.</p>
+        <p>
+          Stay visible on the <span className="font-semibold">Caption Submission Portal</span>{" "}
+          where teams repeatedly log in.
+        </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Host a tech talk, workshop, or product demo.</li>
-          <li>Meet-and-greet with finalists and club members.</li>
-          <li>Invitation to networking segments with faculty & guests.</li>
+          <li>Logo and brand identity integrated into the portal interface.</li>
+          <li>Persistent visibility whenever participants submit or update entries.</li>
+          <li>Subtle yet constant brand recall during the full event cycle.</li>
         </ul>
       </div>
     ),
@@ -104,12 +108,12 @@ export const premiumContents = [
     content: () => (
       <div className="space-y-3">
         <p>
-          Extend your visibility to the digital layer where teams interact most.
+          Extend your reach through <span className="font-semibold">social media promotion</span>.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Logo and tagline on submission dashboard or login page.</li>
-          <li>Subtle branding on confirmation mails / announcements.</li>
-          <li>Optional sponsor microsite or info link from the portal.</li>
+          <li>Regular shout-outs across major event social channels.</li>
+          <li>Branded posters, tags, and story mentions highlighting your support.</li>
+          <li>Inclusion in key announcement, update, and recap posts.</li>
         </ul>
       </div>
     ),
@@ -119,13 +123,13 @@ export const premiumContents = [
     content: () => (
       <div className="space-y-3">
         <p>
-          Design a branded experience zone that students will remember and
-          share.
+          Secure <span className="font-semibold">website-level visibility</span> throughout the
+          event timeline.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Dedicated stall / activation zone inside the event area.</li>
-          <li>Product demo, hiring booth, or showcase corner.</li>
-          <li>Support from the organizing team for footfall & flow.</li>
+          <li>Featured as Premier Partner on the official event website.</li>
+          <li>Placement in sponsor listings and event highlight sections.</li>
+          <li>Continuous exposure for visitors, applicants, and future audiences.</li>
         </ul>
       </div>
     ),
@@ -135,12 +139,13 @@ export const premiumContents = [
     content: () => (
       <div className="space-y-3">
         <p>
-          Leverage the online buzz around Robomania 2.0 to amplify your brand.
+          Put your brand directly into participants’ hands through{" "}
+          <span className="font-semibold">gift boxes and materials</span>.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Pre-event announcement creatives with your logo.</li>
-          <li>Mid-event stories, reels, and live coverage tags.</li>
-          <li>Post-event recap posts acknowledging your partnership.</li>
+          <li>Branding on exclusive participant gift boxes.</li>
+          <li>Logo on select promotional inserts or merchandise.</li>
+          <li>Memorable, take-home exposure beyond the event day.</li>
         </ul>
       </div>
     ),
@@ -150,12 +155,12 @@ export const premiumContents = [
     content: () => (
       <div className="space-y-3">
         <p>
-          Stay visible even after the event through our official website.
+          Reach a broad audience through <span className="font-semibold">newsletter placements</span>.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Logo and tier tag on the Partners / Sponsors section.</li>
-          <li>Short brand blurb + link to your official site.</li>
-          <li>Archive visibility for future visitors and applicants.</li>
+          <li>Brand position within official event newsletters.</li>
+          <li>Visibility among registrants, subscribers, and stakeholders.</li>
+          <li>Reinforcement of your role as a key event partner.</li>
         </ul>
       </div>
     ),
@@ -165,18 +170,31 @@ export const premiumContents = [
     content: () => (
       <div className="space-y-3">
         <p>
-          Create deeper relationships with the community through presence and
-          interaction.
+          Enjoy <span className="font-semibold">exclusive guest privileges</span> during the event.
         </p>
         <ul className="list-disc pl-4 space-y-1">
-          <li>Nominate guests for VIP seating and front-row access.</li>
-          <li>Opportunity to serve as judge / panelist (tier-based).</li>
-          <li>Access to informal networking with organizers and faculty.</li>
+          <li>Two representatives with elevated guest access.</li>
+          <li>Enhanced experience during key sessions and ceremonies.</li>
+          <li>Premium networking opportunities with guests and organizers.</li>
         </ul>
       </div>
     ),
   },
 ];
+
+export const premierKeywords = [
+  { id: 1, keywords: ["Premier title", "“Titled By” lock-up", "High recall"] },
+  { id: 2, keywords: ["Banners & posters", "Screens & backdrops", "On-ground reach"] },
+  { id: 3, keywords: ["2-day booth", "Live demos", "Lead capture"] },
+  { id: 4, keywords: ["3-hour slot", "Talks & workshops", "Focused engagement"] },
+  { id: 5, keywords: ["Submission portal", "Repeat visits", "Digital recall"] },
+  { id: 6, keywords: ["Social campaigns", "Posts & stories", "Online reach"] },
+  { id: 7, keywords: ["Event website", "Sponsor listing", "Highlights"] },
+  { id: 8, keywords: ["Gift boxes", "Promo inserts", "Take-home recall"] },
+  { id: 9, keywords: ["Newsletter slot", "Broad audience", "Targeted reach"] },
+  { id: 10, keywords: ["2 guest passes", "VIP access", "Networking"] },
+];
+
 
 
 const Premium = () => {
@@ -245,7 +263,7 @@ const Premium = () => {
                   >
                     <div
                       className="flex h-[120px] w-full items-center justify-center rounded-2xl"
-                      style={{ backgroundColor: "#55411011" }} // subtle brand-tinted bg
+                      style={{ backgroundColor: "white" }} // subtle brand-tinted bg
                     >
                       <img
                         src={currentSponsor.logo}
@@ -303,7 +321,7 @@ const Premium = () => {
           </div>
         </div>
       </div>
-      <Promotional_Opportunity contents={premiumContents}/>
+      <Promotional_Opportunity contents={premiumContents}  keywords = {premierKeywords} />
       <PartnershipMatrix />
     </section>
   );

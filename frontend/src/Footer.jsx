@@ -1,4 +1,3 @@
-// src/components/layout/Footer.jsx
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaGlobe } from "react-icons/fa";
 
@@ -7,19 +6,22 @@ const Footer = () => {
 
   return (
     <footer className="bg-amber-800 border-t border-amber-900/60 text-white">
-      <div className="mx-auto max-w-6xl px-4 py-8 md:py-10">
+      {/* ↓ less vertical padding */}
+      <div className="mx-auto max-w-6xl px-4 py-4 md:py-6">
         {/* Main area: LEFT (details) | RIGHT (map) */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
+        {/* ↓ slightly smaller gap */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:items-center">
           {/* LEFT SIDE – logo, tagline, socials, contact */}
-          <div className="space-y-6">
+          {/* ↓ slightly smaller vertical spacing */}
+          <div className="space-y-4">
             {/* Logo + socials row */}
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               {/* Logo + text */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
                 <img
                   src="https://aust.edu/storage/files/Rc46weeV7JQjH1VT1DoCUWUMsIp81dtIMvZBMlpm.jpg"
                   alt="AUST Robotics Club Logo"
-                  className="h-16 w-auto"
+                  className="h-14 w-auto" // slightly smaller logo
                 />
                 <div>
                   <h3 className="text-lg font-semibold leading-tight">
@@ -32,43 +34,42 @@ const Footer = () => {
               </div>
 
               {/* Social icons */}
-              <div className="flex flex-col items-center gap-3 md:items-center">
+              <div className="flex flex-col items-center gap-2 md:items-center">
                 <span className="text-sm font-medium tracking-wide">
                   Follow Us
                 </span>
                 <div className="flex gap-3">
-                  {/* TODO: replace '#' with real links */}
                   <a
                     href="https://www.facebook.com/AustRoboticsClub"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-amber-100"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-amber-100"
                   >
-                    <FaFacebookF className="text-[#014F23]" size={18} />
+                    <FaFacebookF className="text-[#014F23]" size={16} />
                   </a>
                   <a
                     href="https://www.instagram.com/aust_robotics_club/"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-amber-100"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-amber-100"
                   >
-                    <FaInstagram className="text-[#014F23]" size={18} />
+                    <FaInstagram className="text-[#014F23]" size={16} />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/aust-robotics-club"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-amber-100"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-amber-100"
                   >
-                    <FaLinkedinIn className="text-[#014F23]" size={18} />
+                    <FaLinkedinIn className="text-[#014F23]" size={16} />
                   </a>
                   <a
                     href="#"
                     target="_blank"
                     rel="noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-amber-100"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/90 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-amber-100"
                   >
-                    <FaGlobe className="text-[#014F23]" size={18} />
+                    <FaGlobe className="text-[#014F23]" size={16} />
                   </a>
                 </div>
               </div>
@@ -98,11 +99,11 @@ const Footer = () => {
 
           {/* RIGHT SIDE – Google Map */}
           <div className="order-first md:order-none">
-            {/* keep label optional */}
             <p className="mb-2 text-sm font-semibold text-center md:text-right text-amber-100">
               Find Us on Google Maps
             </p>
-            <div className="h-56 w-full overflow-hidden rounded-xl border border-amber-300/40 bg-black/10 shadow-sm">
+            {/* ↓ slightly shorter map height */}
+            <div className="h-44 w-full overflow-hidden rounded-xl border border-amber-300/40 bg-black/10 shadow-sm">
               <iframe
                 title="AUST Location"
                 src="https://www.google.com/maps?q=23.76363,90.40697&z=17&output=embed"
@@ -112,11 +113,6 @@ const Footer = () => {
               ></iframe>
             </div>
           </div>
-        </div>
-
-        {/* Bottom copyright line */}
-        <div className="mt-6 border-t border-amber-700/60 pt-4 text-center text-xs text-amber-100">
-          &copy; 2026 • AUST Robotics Club. All Rights Reserved
         </div>
       </div>
     </footer>
