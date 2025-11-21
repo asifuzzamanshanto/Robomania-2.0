@@ -20,6 +20,7 @@ import premierPartnerImg from "../assets/PremierPartner.png";
 import platinumPartnerImg from "../assets/PlatinumPartner.png";
 import goldPartnerImg from "../assets/GoldPartner.jfif";
 import supportingPartnerImg from "../assets/SupportingPartner.png";
+import PrevEvents from "./PrevEvents.jsx";
 
 /* -------------------------------------------------------------------------- */
 /*                                SEGMENTS DATA                               */
@@ -1288,53 +1289,6 @@ const Home = () => {
       <section className="px-4 py-16 md:py-24">
         <div className="mx-auto max-w-7xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16 md:mb-20"
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="inline-block mb-4"
-            >
-              <span className="px-6 py-3 rounded-full border-2 border-amber-400/30 bg-amber-950/30 text-sm font-semibold text-amber-300 tracking-wider uppercase backdrop-blur-md">
-                Our Valued Partners
-              </span>
-            </motion.div>
-
-            <motion.h2
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <span className="bg-linear-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-                Meet Our
-              </span>
-              <br />
-              <span className="bg-linear-to-r from-purple-400 via-pink-400 to-amber-400 bg-clip-text text-transparent">
-                Amazing Partners
-              </span>
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="text-base sm:text-lg md:text-xl text-amber-100/70 max-w-3xl mx-auto leading-relaxed"
-            >
-              Collaboration drives innovation. Discover the organizations that
-              are backing the next wave of robotics talent.
-            </motion.p>
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -1345,8 +1299,13 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      <div className="mx-auto max-w-6xl  gap-10 rounded-3xl border border-[#554110] p-6 backdrop-blur-md md:flex-row md:p-10">
+        <PrevEvents />
+      </div>
+      
     </div>
   );
 };
+
 
 export default Home;

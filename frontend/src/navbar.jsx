@@ -27,11 +27,10 @@ const partnerOptions = [
 export default function Navbar({ user, onLogout = () => {} }) {
   const navItems = [
     { name: "Home", link: "/" },
-    { name: "Activities", link: "/activities" },
     { name: "Partners", link: "/partners/gold" },
     { name: "Segments", link: "/segments" },
-    { name: "Our Gross Reach", link: "/our-gross-reach" },
-    { name: "About Us", link: "/about-us" },
+    { name: "About Us", link: "/aboutus" },
+    { name: "Contact", link: "/contact" },
   ];
 
   const [open, setOpen] = useState(false);

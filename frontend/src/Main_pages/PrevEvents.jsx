@@ -308,9 +308,8 @@ const PrevEvents = () => {
         animate={{ opacity: 1, y: 0 }}
         className="mx-auto mb-6 max-w-3xl text-center"
       >
-        <p className="mb-1 text-[10px] font-medium uppercase tracking-widest text-white/70">Our Journey</p>
-        <h1 className="mb-2 text-xl font-bold text-white md:text-2xl">PREVIOUS EVENTS</h1>
-        <p className="text-xs text-white/80">Tap to explore</p>
+        <p className="mt-3 text-emerald-100/70 text-base sm:text-lg max-w-3xl mx-auto">Our Journey</p>
+        <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-emerald-300 via-amber-300 to-emerald-400 bg-clip-text text-transparent drop-shadow-md">PREVIOUS EVENTS</h1>
       </motion.div>
 
       <div className="mx-auto max-w-3xl grid grid-cols-2 gap-3 mb-6">
@@ -352,14 +351,6 @@ const PrevEvents = () => {
         ))}
       </div>
 
-      <div className="mx-auto max-w-3xl text-center">
-        <button
-          onClick={() => navigate('/event')}
-          className="rounded-full border border-[#554110] bg-white/5 px-5 py-2 text-xs font-medium text-white backdrop-blur-md hover:bg-[#554110] transition-all"
-        >
-          ← Back to Events
-        </button>
-      </div>
 
       <AnimatePresence>
         {selectedEvent && <EventDetailsModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />}

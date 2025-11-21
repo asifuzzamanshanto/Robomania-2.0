@@ -14,6 +14,7 @@ import Premium from './Main_pages/Partners/Premium.jsx';
 import Supporting from './Main_pages/Partners/Supporting.jsx';
 import { DotBackground } from './components/ui/DotBackground.jsx';
 import Footer from './Footer.jsx';
+import Contact from './Main_pages/Contact.jsx';
 function App() {
   return (
    <BrowserRouter>
@@ -28,8 +29,8 @@ function App() {
             <Route path="/partners/premium" element={<Premium/>} />
             <Route path="/partners/supporting" element={<Supporting/>} />
             <Route path="/segments" element={<Segments/>} />
-            <Route path="/our-gross-reach" element={<OurGrossReach/>} />
-            <Route path="/about-us" element={<About />} />
+            <Route path="/aboutus" element={<About />} />
+            <Route path="/contact" element ={<Contact/>}/>
           </Routes>
         </div>
         <Footer/>

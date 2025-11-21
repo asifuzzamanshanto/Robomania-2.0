@@ -84,10 +84,10 @@ const PartnershipMatrix = () => {
         <table className="min-w-full border-collapse">
           {/* Header */}
           <thead>
-            <tr className="bg-[#8B6A2E] text-[13px] font-semibold uppercase tracking-[0.12em] text-white">
+            <tr className="bg-[#8B6A2E] text-[13px] uppercase tracking-[0.12em] text-white">
               <th className="px-4 py-3 text-left">Features</th>
               {tiers.map((tier) => (
-                <th key={tier.key} className="px-4 py-3 text-center">
+                <th key={tier.key} className="px-4 py-3 text-center font-bold">
                   {tier.label}
                 </th>
               ))}

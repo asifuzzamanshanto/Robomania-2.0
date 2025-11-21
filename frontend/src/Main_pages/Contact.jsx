@@ -18,7 +18,7 @@ import { cn } from "@/lib/utils";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-emerald-950 via-slate-950 to-slate-900">
+    <div className="min-h-screen w-full overflow-x-hidden">
       {/* Hero Section */}
       <LampContainer
         className="min-h-[65vh] pt-32 md:pt-36 pb-16"
@@ -31,10 +31,10 @@ const Contact = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-center px-4"
         >
-          <h1 className="bg-gradient-to-br from-emerald-200 to-emerald-400 bg-clip-text text-4xl md:text-6xl font-bold tracking-tight text-transparent">
+          <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-4xl md:text-6xl font-bold tracking-tight text-transparent">
             Contact Us
           </h1>
-          <p className="text-emerald-100/70 text-base md:text-lg max-w-xl mx-auto pt-4">
+          <p className="text-slate-400 text-base md:text-lg max-w-xl mx-auto pt-4">
             We are always happy to assist you with any questions, partnership
             discussions, or clarifications related to Robomania 2.0 or the
             AUST Robotics Club (AUSTRC).
@@ -52,9 +52,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#55411011] backdrop-blur-md rounded-2xl p-6 md:p-10 border border-[#554110] shadow-[0_0_40px_rgba(85,65,16,0.35)] max-w-4xl mx-auto"
+            className="bg-white/5 backdrop-blur-sm rounded-xl p-6 md:p-10 border border-white/10 max-w-4xl mx-auto"
           >
-            <p className="text-emerald-50/90 text-center text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+            <p className="text-slate-300 text-center text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
               For any confusion, sponsorship inquiry, event-related assistance, or official communication — feel free to reach out through the following channels:
             </p>
           </motion.section>
@@ -64,7 +64,7 @@ const Contact = () => {
             icon={<MapPin className="w-8 h-8 text-emerald-400" />}
             title="Official Address"
           >
-            <div className="space-y-3 text-emerald-50/90">
+            <div className="space-y-3 text-slate-300">
               <p className="text-xl font-semibold text-white">
                 Ahsanullah University of Science and Technology Robotics Club (AUSTRC)
               </p>
@@ -72,7 +72,7 @@ const Contact = () => {
               <a
                 href="https://www.google.com/maps?q=141+Love+Road+Tejgaon+Dhaka+1208"
                 target="_blank"
-                className="flex items-start gap-2 hover:text-emerald-300 transition-colors"
+                className="flex items-start gap-2 hover:text-emerald-400 transition-colors"
               >
                 <MapPin className="w-5 h-5 text-emerald-400 mt-1" />
                 <span>
@@ -97,6 +97,7 @@ const Contact = () => {
               <div className="pt-4 flex flex-wrap gap-4">
                 <SocialLink icon={<Facebook />} text="Facebook" href="https://www.facebook.com/AustRoboticsClub" />
                 <SocialLink icon={<Linkedin />} text="LinkedIn" href="https://www.linkedin.com/company/aust-robotics-club/posts/?feedView=all" />
+                
               </div>
             </div>
           </Section>
@@ -110,11 +111,11 @@ const Contact = () => {
             className="space-y-8"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">
-              <Users className="w-12 h-12 text-emerald-400" />
+              <Users className="w-12 h-12 text-emerald-500" />
               Core Contacts
             </h2>
 
-            <p className="text-emerald-100/70 text-base md:text-lg">
+            <p className="text-slate-400 text-base md:text-lg">
               For direct communication with our organizing or management team, contact:
             </p>
 
@@ -183,6 +184,8 @@ const Contact = () => {
                   compact
                 />
               </div>
+
+              
             </div>
           </motion.section>
         </div>
@@ -204,7 +207,7 @@ const Section = ({ icon, title, children }) => (
       {icon}
       {title}
     </h2>
-    <div className="bg-[#55411011] backdrop-blur-md rounded-2xl p-6 md:p-8 border border-[#554110] shadow-[0_0_32px_rgba(85,65,16,0.35)]">
+    <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-emerald-500/20">
       {children}
     </div>
   </motion.section>
@@ -214,7 +217,7 @@ const ContactRow = ({ icon, text, href }) => (
   <a
     href={href}
     target="_blank"
-    className="flex items-center gap-2 hover:text-emerald-300 transition-colors"
+    className="flex items-center gap-2 hover:text-emerald-400 transition-colors"
   >
     {icon}
     <span className="text-sm break-all">{text}</span>
@@ -226,14 +229,12 @@ const SocialLink = ({ icon, text, href }) => (
   <a
     href={href}
     target="_blank"
-    className="flex items-center gap-2 text-emerald-50/80 hover:text-emerald-300 transition-colors"
+    className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors"
   >
     {icon}
     <span>{text}</span>
   </a>
 );
-
-/* Contact Card */
 const ContactCard = ({
   icon,
   title,
@@ -251,7 +252,8 @@ const ContactCard = ({
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
       className={cn(
-        "bg-[#55411011] backdrop-blur-lg rounded-2xl p-5 md:p-6 border border-[#554110] hover:border-[#554110] transition-all",
+        // ⬇️ here: bg + border + backdrop-blur-md
+        "bg-[#55411011] border border-[#554110] backdrop-blur-md rounded-2xl p-5 md:p-6 hover:border-[#554110] transition-all",
         !compact && "hover:shadow-xl hover:shadow-[0_0_32px_rgba(85,65,16,0.35)]"
       )}
     >

@@ -12,6 +12,7 @@ import {
   Layers,
 } from "lucide-react";
 import  OurGrossReach  from "./OurGrossReach.jsx";
+import PrevEvents from "./PrevEvents.jsx";
 const container = {
   hidden: { opacity: 0, y: 24 },
   show: {
@@ -392,65 +393,11 @@ const About = () => {
   >
     {/* Heading */}
     <OurGrossReach />
-    <motion.div variants={item} className="space-y-2">
-      <h2 className="text-3xl sm:text-4xl font-bold bg-linear-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-        Our Previous Events
-      </h2>
-      <p className="text-sm sm:text-base text-amber-100/80">
-        From national rover challenges to intra-university fests, AUSTRC
-        curates platforms where students can test, fail, iterate and
-        win.
-      </p>
-    </motion.div>
 
-    {/* Row-based previous events */}
-    <motion.div variants={item} className="space-y-5">
-      {previousEvents.map((e, idx) => (
-        <motion.article
-          key={e.title}
-          whileHover={{ y: -4, scale: 1.01 }}
-          className="group overflow-hidden rounded-2xl border border-amber-500/30 bg-black/70 backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.85)]"
-        >
-          <div className="flex flex-col md:flex-row md:items-stretch">
-            {/* Image side */}
-            <div className="relative h-40 sm:h-44 md:h-auto md:w-2/5 overflow-hidden">
-              <motion.img
-                src={e.image}
-                alt={e.title}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                initial={{ scale: 1.03 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute left-4 bottom-3 space-y-1">
-                <span className="inline-flex items-center rounded-full bg-amber-500/80 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-black">
-                  {idx === 0
-                    ? "ARC 2022"
-                    : idx === 1
-                    ? "ARC 2.0"
-                    : "Robomania 1.0"}
-                </span>
-                <p className="text-xs text-amber-100/80">{e.subtitle}</p>
-              </div>
-            </div>
 
-            {/* Text side */}
-            <div className="flex-1 p-4 sm:p-5 flex flex-col justify-center">
-              <h3 className="text-lg sm:text-xl font-semibold text-amber-100">
-                {e.title}
-              </h3>
-              <p className="mt-2 text-xs sm:text-sm text-amber-100/75 leading-relaxed">
-                {e.desc}
-              </p>
-              <p className="mt-2 text-xs sm:text-[0.8rem] text-emerald-300/90">
-                {e.highlight}
-              </p>
-            </div>
-          </div>
-        </motion.article>
-      ))}
-    </motion.div>
+      <div className="mx-auto max-w-6xl  gap-10 rounded-3xl border border-[#554110] p-6 backdrop-blur-md md:flex-row md:p-10">
+        <PrevEvents />
+      </div>
   </motion.div>
 </section>
 
