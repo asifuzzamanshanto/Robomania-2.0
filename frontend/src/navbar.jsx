@@ -17,19 +17,20 @@ const PALETTE = {
 };
 
 const partnerOptions = [
+  { name: "Premier Partner", link: "/partners/premier" },
   { name: "Platinum Partner", link: "/partners/platinum" },
-  { name: "Premium Partner", link: "/partners/premium" },
+  
   { name: "Gold Partner", link: "/partners/gold" },
   { name: "Supporting Partner", link: "/partners/supporting" },
 ];
 
-export default function Navbar({ user, onLogout = () => {} }) {
+export default function Navbar(){
   const navItems = [
     { name: "Home", link: "/" },
-    { name: "Partners", link: "/partners/gold" },
+    { name: "Partners", link: "/partners/premier" },
     { name: "Segments", link: "/segments" },
     { name: "About Us", link: "/aboutus" },
-    { name: "Contact", link: "/contact" },
+    { name: "Contact Us", link: "/contact" },
   ];
 
   const [open, setOpen] = useState(false);
@@ -94,7 +95,7 @@ export default function Navbar({ user, onLogout = () => {} }) {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <motion.img
-              src={"https://ik.imagekit.io/mekt2pafz/logo2.png"}
+              src={"https://ik.imagekit.io/mekt2pafz/Robomania%202.0/Website%20Icon-image%20(1).png"}
               alt="Robomania 2.0"
               className="h-7 w-auto object-contain"
               initial={{ opacity: 0, x: -20 }}
@@ -182,7 +183,7 @@ export default function Navbar({ user, onLogout = () => {} }) {
                       }}
                     >
                       <ul className="py-2 text-sm">
-                        {partnerOptions.map((opt, idx) => (
+                        {partnerOptions.map((opt) => (
                           <li 
                             key={opt.link}
                             className="transform transition-transform duration-200 hover:translate-x-1"

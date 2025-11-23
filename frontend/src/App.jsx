@@ -26,7 +26,7 @@ function App() {
             <Route path="/activities" element={<Activites/>} />
             <Route path="/partners/gold" element={<Gold/>} />
             <Route path="/partners/platinum" element={<Platinum/>} />
-            <Route path="/partners/premium" element={<Premium/>} />
+            <Route path="/partners/premier" element={<Premium/>} />
             <Route path="/partners/supporting" element={<Supporting/>} />
             <Route path="/segments" element={<Segments/>} />
             <Route path="/aboutus" element={<About />} />
