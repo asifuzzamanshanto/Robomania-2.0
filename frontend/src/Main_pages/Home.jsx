@@ -798,18 +798,6 @@ const Carousel3D = ({
                       </p>
                     </div>
 
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-full py-2.5 sm:py-3 md:py-3.5 px-3 sm:px-4 rounded-xl bg-linear-to-r from-amber-500 to-amber-600 text-black font-semibold text-xs sm:text-sm md:text-base"
-                      style={{
-                        boxShadow:
-                          "0 0 20px rgba(251, 191, 36, 0.4)",
-                      }}
-                    >
-                      {item.ctaLabel}
-                    </motion.button>
-
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
