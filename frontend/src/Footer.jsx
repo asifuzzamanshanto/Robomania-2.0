@@ -41,7 +41,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-black via-amber-950/20 to-black border-t border-amber-500/20">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-black via-amber-950/20 to-black border-t border-amber-500/20 rounded-t-3xl">
       {/* Animated background glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
