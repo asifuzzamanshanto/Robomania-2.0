@@ -86,12 +86,12 @@ const achievements = [
   {
     title: "Champion – Soccer Bot",
     event: "BAIUST EEE Day 2024",
-    image: "/images/about/achievements/baiust-soccer-bot.jpg",
+    image: "https://ik.imagekit.io/mekt2pafz/Achievements/Baiust.jpeg",
   },
   {
     title: "Champion – Soccer Bot",
     event: "JUSC National Science Festival 2024",
-    image: "/images/about/achievements/jusc-soccer-bot.jpg",
+    image: "https://ik.imagekit.io/mekt2pafz/Achievements/Jusc.jpeg",
   },
   {
     title: "1st Runner-Up – RoboCup Championship",
@@ -101,7 +101,7 @@ const achievements = [
   {
     title: "1st Runner-Up – Robotics Contest",
     event: "Orbit Engineering Expo 2.0 (Nepal 2024)",
-    image: "/images/about/achievements/orbit-nepal.jpg",
+    image: "https://ik.imagekit.io/mekt2pafz/Achievements/Orbit.jpeg",
   },
 ];
 
