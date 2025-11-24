@@ -1,191 +1,313 @@
 import React from "react";
-import { LampContainer } from "@/components/lamp";
 import { motion } from "framer-motion";
 import {
   MapPin,
   Mail,
   Phone,
   Globe,
-  Facebook,
-  Linkedin,
-  Instagram,
   User,
   Briefcase,
   Newspaper,
-  Users
+  Users,
+  Send,
+  Clock,
+  Building2
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
-      {/* Hero Section */}
-      <LampContainer
-        className="min-h-[65vh] pt-32 md:pt-36 pb-16"
-        contentClassName="-translate-y-30 md:-translate-y-44"
-      >
+      {/* Animated Background Glows */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-center px-4"
-        >
-          <h1 className="bg-gradient-to-br from-slate-300 to-slate-500 bg-clip-text text-4xl md:text-6xl font-bold tracking-tight text-transparent">
-            Contact Us
-          </h1>
-          <p className="text-slate-400 text-base md:text-lg max-w-xl mx-auto pt-4">
-            We are always happy to assist you with any questions, partnership
-            discussions, or clarifications related to Robomania 2.0 or the
-            AUST Robotics Club (AUSTRC).
-          </p>
-        </motion.div>
-      </LampContainer>
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.5, 0.3, 0.5],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+        />
+      </div>
+
+      {/* Hero Section */}
+      <div className="relative z-10 pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-sm font-medium"
+            >
+              <Mail className="w-4 h-4" />
+              <span>Get In Touch</span>
+            </motion.div>
+
+            <h1 className="text-5xl md:text-7xl font-bold">
+              <span className="bg-linear-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent">
+                Contact Us
+              </span>
+            </h1>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-amber-100/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+            >
+              We're here to assist you with any questions, partnership discussions, 
+              or clarifications about Robomania 2.0 and AUST Robotics Club.
+            </motion.p>
+          </motion.div>
+        </div>
+      </div>
 
       {/* Main Content */}
-      <div className="relative mt-12 px-4 pb-20 md:px-8 z-10">
+      <div className="relative z-10 px-4 pb-20">
         <div className="max-w-7xl mx-auto space-y-16">
 
-          {/* Introduction */}
+          {/* Contact Methods Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="grid md:grid-cols-3 gap-6"
+          >
+            <ContactMethodCard
+              icon={<Mail className="w-6 h-6" />}
+              title="Email Us"
+              info="austrc@aust.edu"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=austrc@aust.edu"
+              delay={0.1}
+            />
+            <ContactMethodCard
+              icon={<Globe className="w-6 h-6" />}
+              title="Visit Website"
+              info="www.austrc.com"
+              href="https://www.austrc.com"
+              delay={0.2}
+            />
+            <ContactMethodCard
+              icon={<MapPin className="w-6 h-6" />}
+              title="Find Us"
+              info="Dhaka-1208, Bangladesh"
+              href="https://www.google.com/maps?q=141+Love+Road+Tejgaon+Dhaka+1208"
+              delay={0.3}
+            />
+          </motion.div>
+
+          {/* Official Address Section */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/5 backdrop-blur-sm rounded-xl p-6 md:p-10 border border-white/10 max-w-4xl mx-auto"
+            transition={{ duration: 0.6 }}
+            className="relative"
           >
-            <p className="text-slate-300 text-center text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-              For any confusion, sponsorship inquiry, event-related assistance, or official communication — feel free to reach out through the following channels:
-            </p>
-          </motion.section>
+            <div className="absolute inset-0 bg-linear-to-r from-amber-500/5 to-amber-600/5 rounded-3xl blur-xl" />
+            <div className="relative bg-gradient-to-br from-amber-950/40 via-black/60 to-amber-900/40 backdrop-blur-xl rounded-3xl border border-amber-400/20 p-8 md:p-12 overflow-hidden">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/5 rounded-full blur-3xl" />
+              
+              <div className="relative space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center border border-amber-400/30">
+                    <Building2 className="w-6 h-6 text-amber-400" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-amber-300">
+                    Official Address
+                  </h2>
+                </div>
 
-          {/* Official Address */}
-          <Section
-            icon={<MapPin className="w-8 h-8 text-emerald-400" />}
-            title="Official Address"
-          >
-            <div className="space-y-3 text-slate-300">
-              <p className="text-xl font-semibold text-white">
-                Ahsanullah University of Science and Technology Robotics Club (AUSTRC)
-              </p>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-6">
+                    <div>
+                      <p className="text-2xl font-semibold text-white mb-2">
+                        AUST Robotics Club
+                      </p>
+                      <p className="text-amber-100/60 text-sm">
+                        Ahsanullah University of Science and Technology
+                      </p>
+                    </div>
 
-              <a
-                href="https://www.google.com/maps?q=141+Love+Road+Tejgaon+Dhaka+1208"
-                target="_blank"
-                className="flex items-start gap-2 hover:text-emerald-400 transition-colors"
-              >
-                <MapPin className="w-5 h-5 text-emerald-400 mt-1" />
-                <span>
-                  141 & 142, Love Road, Tejgaon Industrial Area, <br />
-                  Dhaka – 1208, Bangladesh
-                </span>
-              </a>
+                    <motion.a
+                      href="https://www.google.com/maps?q=141+Love+Road+Tejgaon+Dhaka+1208"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ x: 5 }}
+                      className="flex items-start gap-3 text-amber-100/80 hover:text-amber-300 transition-colors group"
+                    >
+                      <MapPin className="w-5 h-5 text-amber-400 mt-1 group-hover:scale-110 transition-transform" />
+                      <span>
+                        141 & 142, Love Road, Tejgaon Industrial Area,<br />
+                        Dhaka-1208, Bangladesh
+                      </span>
+                    </motion.a>
 
-              <div className="pt-4 space-y-2">
-                <ContactRow
-                  icon={<Mail className="w-5 h-5 text-emerald-400" />}
-                  text="austrc@aust.edu"
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=austrc@aust.edu"
-                />
-                <ContactRow
-                  icon={<Globe className="w-5 h-5 text-emerald-400" />}
-                  text="www.austrc.com"
-                  href="https://www.austrc.com"
-                />
-              </div>
+                    <div className="flex flex-wrap gap-4 pt-4">
+                      {[
+                        { icon: FaFacebookF, href: "https://www.facebook.com/AustRoboticsClub", label: "Facebook" },
+                        { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/aust-robotics-club/posts/?feedView=all", label: "LinkedIn" },
+                        { icon: FaInstagram, href: "https://www.instagram.com/aust_robotics_club/", label: "Instagram" }
+                      ].map((social, index) => (
+                        <motion.a
+                          key={social.label}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          initial={{ opacity: 0, scale: 0 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.1 }}
+                          whileHover={{ scale: 1.15, y: -3 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-300 hover:bg-amber-500/30 hover:text-white transition-all duration-300"
+                          aria-label={social.label}
+                        >
+                          <social.icon size={18} />
+                        </motion.a>
+                      ))}
+                    </div>
+                  </div>
 
-              <div className="pt-4 flex flex-wrap gap-4">
-                <SocialLink icon={<Facebook />} text="Facebook" href="https://www.facebook.com/AustRoboticsClub" />
-                <SocialLink icon={<Linkedin />} text="LinkedIn" href="https://www.linkedin.com/company/aust-robotics-club/posts/?feedView=all" />
-                
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.02 }}
+                    className="h-64 rounded-2xl overflow-hidden border border-amber-400/30 shadow-lg"
+                  >
+                    <iframe
+                      title="AUST Location"
+                      src="https://www.google.com/maps?q=23.76363,90.40697&z=17&output=embed"
+                      className="w-full h-full"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </motion.div>
+                </div>
               </div>
             </div>
-          </Section>
+          </motion.section>
 
-          {/* Core Contacts */}
+          {/* Core Team Section */}
           <motion.section
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">
-              <Users className="w-12 h-12 text-emerald-500" />
-              Core Contacts
-            </h2>
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl md:text-5xl font-bold">
+                <span className="bg-linear-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent">
+                  Meet Our Team
+                </span>
+              </h2>
+              <p className="text-amber-100/70 text-lg max-w-2xl mx-auto">
+                Connect directly with our organizing and management team
+              </p>
+            </div>
 
-            <p className="text-slate-400 text-base md:text-lg">
-              For direct communication with our organizing or management team, contact:
-            </p>
-
-            {/* Cards */}
+            {/* Leadership Cards */}
             <div className="grid md:grid-cols-2 gap-6">
-              <ContactCard
-                icon={<User />}
-                title="General Inquiries & Coordination"
+              <TeamMemberCard
                 name="Khalid Hasan Drobo"
                 position="President, AUSTRC"
-                phone="+880 1316-345727"
+                role="General Inquiries & Coordination"
+                phone="+880 1316345727"
                 email="president@austrc.com"
                 image="https://ik.imagekit.io/mekt2pafz/MSM%20PIC/11.jpg"
+                icon={<User className="w-5 h-5" />}
+                delay={0.1}
               />
-              <ContactCard
-                icon={<Briefcase />}
-                title="Club Administration & Documentation"
+              <TeamMemberCard
                 name="Md. Nazmul Islam Sayem"
                 position="General Secretary, AUSTRC"
-                phone="+880 1521-788690"
+                role="Club Administration & Documentation"
+                phone="+880 1521788690"
                 email="gs@austrc.com"
                 image="https://ik.imagekit.io/mekt2pafz/MSM%20PIC/2.jpg"
+                icon={<Briefcase className="w-5 h-5" />}
+                delay={0.2}
               />
-              <ContactCard
-                icon={<Briefcase />}
-                title="Sponsorship & Partnership"
+              <TeamMemberCard
                 name="Safayet Al Asif"
-                position="Vice President, AUSTRC / Asst. Director, MSM"
-                phone="+880 1880-864777"
+                position="Vice President, AUSTRC"
+                role="Sponsorship & Partnership"
+                phone="+880 1880864777"
                 email="vp@austrc.com"
                 image="https://ik.imagekit.io/mekt2pafz/MSM%20PIC/3.jpg"
+                icon={<Briefcase className="w-5 h-5" />}
+                delay={0.3}
               />
-              <ContactCard
-                icon={<Newspaper />}
-                title="Media & Public Relations"
+              <TeamMemberCard
                 name="Md. Meheraj"
-                position="Director, MSM Team"
-                phone="+880 1609-417195"
+                position="Director of MSM Team"
+                role="Media & Public Relations"
+                phone="+880 1609417195"
                 email="director.pr@austrc.com"
                 image="https://ik.imagekit.io/mekt2pafz/MSM%20PIC/4.jpg"
+                icon={<Newspaper className="w-5 h-5" />}
+                delay={0.4}
               />
             </div>
 
             {/* Assistant Directors */}
-            <div className="space-y-4 mt-8">
-              <h3 className="text-2xl font-semibold text-white flex items-center gap-3">
-                <Users className="w-6 h-6 text-emerald-400" />
-                Assistant Directors (PR & Sponsorship Management)
-              </h3>
+            <div className="space-y-6 mt-12">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center border border-amber-400/30">
+                  <Users className="w-5 h-5 text-amber-400" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-amber-300">
+                  Assistant Directors (MSM Team)
+                </h3>
+              </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <ContactCard
-                  icon={<Users />}
+                <TeamMemberCard
                   name="Tahmid Khan"
-                  phone="+880 1516-500860"
+                  position="Asst. Director of MSM Team"
+                  phone="+880 1516500860"
                   email="ad.pr@austrc.com"
                   image="https://ik.imagekit.io/mekt2pafz/MSM%20PIC/5.jpg"
                   compact
+                  delay={0.5}
                 />
-                <ContactCard
-                  icon={<Users />}
+                <TeamMemberCard
                   name="Zamiur Rahman Nabid"
-                  phone="+880 1919-877740"
+                  position="Asst. Director of MSM Team"
+                  phone="+880 1919877740"
                   email="ad.pr@austrc.com"
                   image="https://ik.imagekit.io/mekt2pafz/MSM%20PIC/6.jpg"
                   compact
+                  delay={0.6}
                 />
               </div>
-
-              
             </div>
           </motion.section>
         </div>
@@ -194,122 +316,144 @@ const Contact = () => {
   );
 };
 
-/* Section Layout Wrapper */
-const Section = ({ icon, title, children }) => (
-  <motion.section
-    initial={{ opacity: 0, y: 30 }}
+/* Contact Method Card Component */
+const ContactMethodCard = ({ icon, title, info, href, delay }) => (
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.5 }}
-    className="space-y-6"
+    transition={{ delay, duration: 0.5 }}
+    whileHover={{ y: -5, scale: 1.02 }}
+    className="group relative bg-gradient-to-br from-amber-950/40 via-black/60 to-amber-900/40 backdrop-blur-xl rounded-2xl border border-amber-400/20 p-6 hover:border-amber-400/40 transition-all duration-300 overflow-hidden"
   >
-    <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center gap-3">
-      {icon}
-      {title}
-    </h2>
-    <div className="bg-gradient-to-br from-slate-900/50 to-slate-800/50 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-emerald-500/20">
-      {children}
+    {/* Glow effect */}
+    <motion.div
+      className="absolute inset-0 bg-linear-to-r from-amber-500/0 via-amber-500/10 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+      initial={false}
+    />
+    
+    <div className="relative space-y-4">
+      <div className="w-12 h-12 rounded-xl bg-amber-500/20 flex items-center justify-center border border-amber-400/30 text-amber-400 group-hover:scale-110 transition-transform duration-300">
+        {icon}
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold text-amber-300 mb-1">{title}</h3>
+        <p className="text-amber-100/70 text-sm group-hover:text-amber-100 transition-colors">
+          {info}
+        </p>
+      </div>
+      <motion.div
+        className="flex items-center gap-2 text-amber-400 text-sm font-medium"
+        initial={{ x: 0 }}
+        whileHover={{ x: 5 }}
+      >
+        <span>Connect</span>
+        <Send className="w-4 h-4" />
+      </motion.div>
     </div>
-  </motion.section>
+  </motion.a>
 );
 
-const ContactRow = ({ icon, text, href }) => (
-  <a
-    href={href}
-    target="_blank"
-    className="flex items-center gap-2 hover:text-emerald-400 transition-colors"
-  >
-    {icon}
-    <span className="text-sm break-all">{text}</span>
-  </a>
-);
-
-/* Social Link */
-const SocialLink = ({ icon, text, href }) => (
-  <a
-    href={href}
-    target="_blank"
-    className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors"
-  >
-    {icon}
-    <span>{text}</span>
-  </a>
-);
-const ContactCard = ({
-  icon,
-  title,
+/* Team Member Card Component */
+const TeamMemberCard = ({
   name,
   position,
+  role,
   phone,
   email,
   image,
-  compact = false
+  icon,
+  compact = false,
+  delay = 0
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-      className={cn(
-        // ⬇️ here: bg + border + backdrop-blur-md
-        "bg-[#55411011] border border-[#554110] backdrop-blur-md rounded-2xl p-5 md:p-6 hover:border-[#554110] transition-all",
-        !compact && "hover:shadow-xl hover:shadow-[0_0_32px_rgba(85,65,16,0.35)]"
-      )}
+      transition={{ delay, duration: 0.5 }}
+      whileHover={{ y: -5 }}
+      className="group relative bg-gradient-to-br from-amber-950/40 via-black/60 to-amber-900/40 backdrop-blur-xl rounded-2xl border border-amber-400/20 overflow-hidden hover:border-amber-400/40 transition-all duration-300"
     >
-      <div className="flex flex-row items-stretch gap-5">
-        <div className="space-y-4 flex-1">
-          {!compact && title && (
-            <div className="flex items-start gap-3">
-              <div className="p-2 bg-emerald-500/15 rounded-md text-emerald-300">
-                {icon}
-              </div>
-              <h4 className="text-emerald-300 font-semibold text-sm uppercase tracking-wide mt-1">
-                {title}
-              </h4>
-            </div>
-          )}
+      {/* Background glow effect */}
+      <motion.div
+        className="absolute inset-0 bg-linear-to-br from-amber-500/0 via-amber-500/5 to-amber-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        initial={false}
+      />
 
-          <div className={cn("space-y-3", compact && "pl-0")}>
-            {compact && (
-              <div className="flex items-center gap-2 text-emerald-300">
-                {icon}
+      <div className="relative p-6">
+        <div className="flex gap-6">
+          {/* Image */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="shrink-0"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-amber-400/20 rounded-xl blur-lg group-hover:bg-amber-400/30 transition-colors" />
+              <img
+                src={image}
+                alt={name}
+                className={`relative rounded-xl object-cover border-2 border-amber-400/30 ${
+                  compact ? "w-20 h-20" : "w-24 h-24"
+                }`}
+              />
+            </div>
+          </motion.div>
+
+          {/* Content */}
+          <div className="flex-1 space-y-4">
+            {!compact && role && (
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 border border-amber-400/30">
+                  {icon}
+                </div>
+                <span className="text-xs uppercase tracking-wider text-amber-400/80 font-medium">
+                  {role}
+                </span>
               </div>
             )}
 
             <div>
-              <p className="text-white font-semibold text-lg">{name}</p>
-              {position && (
-                <p className="text-emerald-100/70 text-sm mt-1">{position}</p>
-              )}
+              <h3 className="text-xl font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">
+                {name}
+              </h3>
+              <p className="text-amber-100/70 text-sm">
+                {position}
+              </p>
             </div>
 
-            <div className="space-y-2 text-emerald-50/90">
-              <ContactRow
-                icon={<Phone className="w-4 h-4 text-emerald-400" />}
-                text={phone}
+            <div className="space-y-2">
+              <motion.a
                 href={`tel:${phone.replace(/\s/g, "")}`}
-              />
-              <ContactRow
-                icon={<Mail className="w-4 h-4 text-emerald-400" />}
-                text={email}
+                whileHover={{ x: 3 }}
+                className="flex items-center gap-2 text-amber-100/80 hover:text-amber-300 transition-colors text-sm"
+              >
+                <Phone className="w-4 h-4 text-amber-400" />
+                <span>{phone}</span>
+              </motion.a>
+              <motion.a
                 href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
-              />
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 3 }}
+                className="flex items-center gap-2 text-amber-100/80 hover:text-amber-300 transition-colors text-sm"
+              >
+                <Mail className="w-4 h-4 text-amber-400" />
+                <span className="break-all">{email}</span>
+              </motion.a>
             </div>
           </div>
         </div>
-
-        <div className="flex justify-end items-center shrink-0">
-          <img
-            src={image}
-            alt={`${name} contact visual`}
-            className={cn(
-              "rounded-xl object-cover border border-[#554110] shadow-lg shadow-[0_0_32px_rgba(85,65,16,0.35)]",
-              compact ? "w-20 h-20" : "w-28 h-28 md:w-32 md:h-32"
-            )}
-          />
-        </div>
       </div>
+
+      {/* Bottom accent line */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-transparent via-amber-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        initial={false}
+      />
     </motion.div>
   );
 };
