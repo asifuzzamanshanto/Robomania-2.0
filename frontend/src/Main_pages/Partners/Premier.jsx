@@ -3,33 +3,41 @@ import { motion, AnimatePresence } from "framer-motion";
 import Promotional_Opportunity from "./Promotional_Opportunity";
 import PartnershipMatrix from "./PartnershipMatrix";
 
-const premiumSponsors = [
-    {
+const PremierSponsors = [
+  {
+    name: "Prime Bank",
+    tagline: "ARC 2.0 (2025)",
+    logo: "https://www.primebank.com.bd/web/new_assets/assets/images/new-logo-en.png",
+  },
+  {
+    name: "Ispahani Limited",
+    tagline: "ARC 1.0 (2022)",
+    logo: "https://www.ispahanifoods.com/wp-content/uploads/2019/10/logo.png",
+  },
+  {
     name: "Ulterior Engineering Intl.",
-    tagline: "ARC 1.0 ",
+    tagline: "ROBOMANIA 1.0 ",
     logo: "https://scontent.fdac138-2.fna.fbcdn.net/v/t39.30808-6/471852262_610576054806180_1030698770042489876_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_p2X42aiafkQ7kNvwGHvqXJ&_nc_oc=AdniX2raKE7K29qIhcQT33DHJVdJ2XC1cHaVawcew8iwL1Ig2VbjR-HClk0gcAW8Bcs&_nc_zt=23&_nc_ht=scontent.fdac138-2.fna&_nc_gid=XUiVLPshsKbl8OUBdP3yfw&oh=00_AfgTOSRjBYYAXg2i1swejAg_zrGlri3AxDsg60JTPVMnrQ&oe=692638A7",
   },
-
 ];
-// e.g. put this in PremiumContents.jsx or directly in Premium.jsx
-// PremiumContents.jsx
-// PremiumContents.jsx
-export const PlatinumContents = [
+// e.g. put this in PremierContents.jsx or directly in Premier.jsx
+// PremierContents.jsx
+export const PremierContents = [
   {
     id: 1,
     content: () => (
       <div className="space-y-4 text-sm sm:text-[0.95rem] text-amber-50/90">
         <div className="space-y-1">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-200/80">
-            Exclusive Powered By Placement
+            Exclusive Title Placement
           </p>
           <p>
-            As a{" "}
-            <span className="font-semibold text-amber-100">Platinum Partner</span>, your
-            brand is locked into premium{" "}
-            <span className="font-semibold text-amber-200">“Powered By”</span> placements
-            across key event materials, ensuring high-impact visibility and a strong
-            association with Robomania 2.0.
+            As the{" "}
+            <span className="font-semibold text-amber-100">Premier Partner</span>, your
+            brand is locked into the premium{" "}
+            <span className="font-semibold text-amber-200">“Titled By”</span> position
+            across key event materials, creating a strong, long-term association with
+            Robomania 2.0.
           </p>
         </div>
 
@@ -38,15 +46,19 @@ export const PlatinumContents = [
             What this includes
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
-            <li>“Powered By” lock-up on key event collaterals.</li>
-            <li>Premium association with the event’s core visual identity.</li>
-            <li>Strong recall as the brand powering Robomania 2.0.</li>
+            <li>Featured as the primary “Premier Partner” / title credit.</li>
+            <li>“Titled By” lock-up on core event materials and touchpoints.</li>
+            <li>Persistent association with the event’s core identity.</li>
           </ul>
         </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Ideal for brands that want their name to be{" "}
+          <span className="font-semibold">synonymous with the event itself</span>.
+        </p>
       </div>
     ),
   },
-
   {
     id: 2,
     content: () => (
@@ -56,11 +68,9 @@ export const PlatinumContents = [
             Brand Visibility & Logo Placement
           </p>
           <p>
-            Your logo appears across{" "}
-            <span className="font-semibold text-amber-100">
-              high-visibility promotional and on-ground assets
-            </span>
-            , keeping your brand present wherever the event is seen.
+            As a Premier Partner, your logo is placed across{" "}
+            <span className="font-semibold text-amber-100">high-visibility assets</span>,
+            ensuring your brand is consistently noticed on-ground and online.
           </p>
         </div>
 
@@ -70,18 +80,20 @@ export const PlatinumContents = [
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
             <li>
-              Logos on eligible banners, screens, posters and stage-side assets.
+              Logo on banners, backdrops, standees and major event posters at AUST campus.
             </li>
-            <li>Presence across curated digital content and promotion items.</li>
-            <li>
-              Consistent exposure across the full event communication journey.
-            </li>
+            <li>Brand exposure through primary on-site display areas.</li>
+            <li>Integration into selected digital and printed communications.</li>
           </ul>
         </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Maximizes{" "}
+          <span className="font-semibold">top-of-mind recall throughout the event</span>.
+        </p>
       </div>
     ),
   },
-
   {
     id: 3,
     content: () => (
@@ -91,9 +103,11 @@ export const PlatinumContents = [
             On-Site Engagement & Activation
           </p>
           <p>
-            Make the most of a{" "}
-            <span className="font-semibold text-amber-100">dedicated one-day booth</span>{" "}
-            to connect with students, guests and visitors in person.
+            Use a{" "}
+            <span className="font-semibold text-amber-100">
+              dedicated two-day booth
+            </span>{" "}
+            to build meaningful, face-to-face engagement with students and visitors.
           </p>
         </div>
 
@@ -102,19 +116,25 @@ export const PlatinumContents = [
             What this includes
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
-            <li>One full day of booth presence in the event area.</li>
+            <li>Two full days of booth presence inside the event zone.</li>
             <li>
-              Space for demos, Q&A, product or service showcasing and quick activations.
+              Space for demos, product displays, interactive setups and hands-on
+              experiences.
             </li>
-            <li>
-              Direct interactions to understand audience interests and collect leads.
-            </li>
+            <li>Opportunities to collect leads, feedback and interests directly.</li>
           </ul>
         </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Perfect for brands that want{" "}
+          <span className="font-semibold">
+            deeper conversations, not just logo impressions
+          </span>
+          .
+        </p>
       </div>
     ),
   },
-
   {
     id: 4,
     content: () => (
@@ -124,9 +144,11 @@ export const PlatinumContents = [
             Exclusive Engagement Opportunities
           </p>
           <p>
-            Use a{" "}
-            <span className="font-semibold text-amber-100">dedicated one-hour slot</span>{" "}
-            to pull focus fully onto your brand and message.
+            Unlock{" "}
+            <span className="font-semibold text-amber-100">
+              three hours of dedicated event time
+            </span>{" "}
+            to engage a focused audience with your own narrative.
           </p>
         </div>
 
@@ -135,33 +157,37 @@ export const PlatinumContents = [
             What this includes
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
-            <li>One hour of exclusive stage or session time.</li>
+            <li>Three hours of reserved event time for your brand’s agenda.</li>
             <li>
-              Flexibility for presentations, product demos, workshops or live Q&A.
+              Flexibility to run tech talks, workshops, live demos or launch segments.
             </li>
             <li>
-              Focused attention from participants around your chosen activity.
+              Session format tailored to meet your campaign and communication objectives.
             </li>
           </ul>
         </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Enables{" "}
+          <span className="font-semibold">deeper storytelling and thought-leadership</span>.
+        </p>
       </div>
     ),
   },
-
   {
     id: 5,
     content: () => (
       <div className="space-y-4 text-sm sm:text-[0.95rem] text-amber-50/90">
         <div className="space-y-1">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-200/80">
-            Limited Submission Portal Branding
+            Submission Portal Branding
           </p>
           <p>
-            Gain{" "}
+            Stay visible on the{" "}
             <span className="font-semibold text-amber-100">
-              consistent visibility on the Caption Submission Portal
+              Caption Submission Portal
             </span>
-            , where teams frequently upload and edit their entries.
+            , a tool teams repeatedly use throughout the competition.
           </p>
         </div>
 
@@ -171,18 +197,24 @@ export const PlatinumContents = [
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
             <li>
-              Prominent but limited branding within the submission portal interface.
+              Logo and brand identity integrated into the submission portal interface.
             </li>
-            <li>Visibility whenever teams log in to submit or update their work.</li>
             <li>
-              Subtle brand reinforcement at an important part of the participant journey.
+              Continuous visibility every time participants submit or update entries.
+            </li>
+            <li>
+              Subtle but constant brand recall over the full event lifecycle.
             </li>
           </ul>
         </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Great for{" "}
+          <span className="font-semibold">always-on visibility during key actions</span>.
+        </p>
       </div>
     ),
   },
-
   {
     id: 6,
     content: () => (
@@ -192,11 +224,11 @@ export const PlatinumContents = [
             Social Media Promotion
           </p>
           <p>
-            Be part of{" "}
+            Extend your reach through{" "}
             <span className="font-semibold text-amber-100">
-              the event’s social media story
+              high-frequency social media coverage
             </span>{" "}
-            through curated posts, mentions and visuals.
+            across event channels.
           </p>
         </div>
 
@@ -205,31 +237,36 @@ export const PlatinumContents = [
             What this includes
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
-            <li>Inclusion in event social media campaigns and highlight posts.</li>
-            <li>Mentions and visual placements across stories and updates.</li>
+            <li>Regular shout-outs across major event social platforms.</li>
+            <li>Branded posters, tags and story mentions highlighting your support.</li>
             <li>
-              Amplified reach through the event’s official digital channels.
+              Inclusion in key announcements, updates and post-event recap content.
             </li>
           </ul>
         </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Boosts{" "}
+          <span className="font-semibold">online visibility and engagement</span> around your
+          brand.
+        </p>
       </div>
     ),
   },
-
   {
     id: 7,
     content: () => (
       <div className="space-y-4 text-sm sm:text-[0.95rem] text-amber-50/90">
         <div className="space-y-1">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-200/80">
-            Limited Website Promotion
+            Website Promotion
           </p>
           <p>
-            Your brand receives{" "}
+            Secure{" "}
             <span className="font-semibold text-amber-100">
-              dedicated mention on the event website
+              website-level visibility
             </span>{" "}
-            as a Platinum Partner, supporting your visibility and credibility.
+            throughout the event and beyond.
           </p>
         </div>
 
@@ -238,33 +275,39 @@ export const PlatinumContents = [
             What this includes
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
-            <li>Tier-labelled mention on the official event website.</li>
+            <li>Featured as Premier Partner on the official event website.</li>
             <li>
-              Acknowledgement as a Platinum Partner in relevant website sections.
+              Placement in sponsor listings, event highlight sections and recap pages.
             </li>
             <li>
-              Added credibility through alignment with AUST and Robomania 2.0.
+              Continuous exposure for visitors, applicants and future audiences who revisit
+              event information.
             </li>
           </ul>
         </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Creates{" "}
+          <span className="font-semibold">evergreen visibility</span> even after the event
+          ends.
+        </p>
       </div>
     ),
   },
-
   {
     id: 8,
     content: () => (
       <div className="space-y-4 text-sm sm:text-[0.95rem] text-amber-50/90">
         <div className="space-y-1">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-200/80">
-            Limited Newsletter Advertisement
+            Gift Box Branding & Promotional Materials
           </p>
           <p>
-            Reach participants and subscribers via{" "}
+            Put your brand directly into participants’ hands through{" "}
             <span className="font-semibold text-amber-100">
-              selected newsletter placements
+              curated gift boxes and materials
             </span>
-            , aligned to key event moments.
+            .
           </p>
         </div>
 
@@ -273,21 +316,63 @@ export const PlatinumContents = [
             What this includes
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
+            <li>Branding on exclusive participant gift boxes.</li>
+            <li>Logo on selected inserts, goodies or promotional merchandise.</li>
             <li>
-              Brand inclusion in selected event newsletter editions and segments.
-            </li>
-            <li>Visibility among registrants, subscribers and key contacts.</li>
-            <li>
-              Targeted impressions during important communication checkpoints.
+              Memorable, take-home exposure that extends beyond the event days.
             </li>
           </ul>
         </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Builds{" "}
+          <span className="font-semibold">tangible, long-lasting brand recall</span>.
+        </p>
       </div>
     ),
   },
-
   {
     id: 9,
+    content: () => (
+      <div className="space-y-4 text-sm sm:text-[0.95rem] text-amber-50/90">
+        <div className="space-y-1">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-200/80">
+            Newsletter Advertisement
+          </p>
+          <p>
+            Reach a broad audience through{" "}
+            <span className="font-semibold text-amber-100">
+              strategic newsletter placements
+            </span>
+            .
+          </p>
+        </div>
+
+        <div className="rounded-xl border border-amber-300/25 bg-white/5 px-3.5 py-3 space-y-2">
+          <h4 className="text-[0.8rem] font-semibold uppercase tracking-[0.14em] text-amber-200">
+            What this includes
+          </h4>
+          <ul className="space-y-1.5 list-disc pl-4">
+            <li>Brand positioning within official event newsletters.</li>
+            <li>
+              Visibility among registrants, subscribers and key stakeholders.
+            </li>
+            <li>
+              Reinforcement of your role as a{" "}
+              <span className="font-semibold text-amber-100">core event partner</span>.
+            </li>
+          </ul>
+        </div>
+
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Strengthens{" "}
+          <span className="font-semibold">communication touchpoints beyond the venue</span>.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 10,
     content: () => (
       <div className="space-y-4 text-sm sm:text-[0.95rem] text-amber-50/90">
         <div className="space-y-1">
@@ -295,11 +380,11 @@ export const PlatinumContents = [
             Guest Privileges
           </p>
           <p>
-            Offer your team a{" "}
+            Offer your team{" "}
             <span className="font-semibold text-amber-100">
-              premium on-event experience
+              exclusive on-event experience
             </span>{" "}
-            through exclusive guest access.
+            with elevated guest access.
           </p>
         </div>
 
@@ -308,186 +393,71 @@ export const PlatinumContents = [
             What this includes
           </h4>
           <ul className="space-y-1.5 list-disc pl-4">
-            <li>One representative with exclusive guest privileges.</li>
+            <li>Two representatives with exclusive guest privileges.</li>
             <li>
-              Elevated access and a smoother experience during key sessions and
-              ceremonies.
+              Enhanced experience during key sessions, ceremonies and networking
+              moments.
             </li>
             <li>
-              Better opportunities to{" "}
+              Premier access to{" "}
               <span className="font-semibold text-amber-100">
-                connect with organizers and stakeholders
+                connect with organizers, judges and other partners
               </span>
               .
             </li>
           </ul>
         </div>
-      </div>
-    ),
-  },
 
-  {
-    id: 10,
-    content: () => (
-      <div className="space-y-4 text-sm sm:text-[0.95rem] text-amber-50/90">
-        <div className="space-y-1">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-amber-200/80">
-            Gift Box Branding & Materials
-          </p>
-          <p className="text-amber-100/85">
-            <span className="font-semibold text-rose-200">
-              Not included in this tier.
-            </span>{" "}
-            Gift box branding and in-box materials are reserved for higher tiers.
-          </p>
-        </div>
-
-        <div className="rounded-xl border border-rose-400/40 bg-rose-500/10 px-3.5 py-3 space-y-2">
-          <h4 className="text-[0.8rem] font-semibold uppercase tracking-[0.14em] text-rose-100/90">
-            What this means
-          </h4>
-          <ul className="space-y-1.5 list-disc pl-4 text-rose-50/90">
-            <li>No branding on participant gift boxes.</li>
-            <li>No inserts, leaflets or physical materials in the gift kits.</li>
-            <li>
-              For in-box presence, consider{" "}
-              <span className="font-semibold">Premier or custom packages</span>.
-            </li>
-          </ul>
-        </div>
+        <p className="text-[0.75rem] text-amber-200/85">
+          Impact: Elevates{" "}
+          <span className="font-semibold">relationship-building opportunities</span> on
+          event days.
+        </p>
       </div>
     ),
   },
 ];
+
 
 export const premierKeywords = [
-  // 1. Visibility in Exclusive Powered By Placement
-  {
-    id: 1,
-    keywords: [
-      { label: "Visibility in exclusive Powered By placement", status: "full" },
-      { label: "Locked into hero title & key visuals", status: "full" },
-      { label: "Brand shown as primary Powered By partner", status: "full" },
-    ],
-  },
-
-  // 2. All possible Brand Visibility & Logo Placement
-  {
-    id: 2,
-    keywords: [
-      { label: "All possible brand visibility touchpoints", status: "full" },
-      { label: "Logo on print, digital & on-site assets", status: "full" },
-      { label: "Priority logo placement across collaterals", status: "full" },
-    ],
-  },
-
-  // 3. 1 Day of On-Site Engagement & Activation
-  {
-    id: 3,
-    keywords: [
-      { label: "1 full day of on-site engagement", status: "full" },
-      { label: "Branded activation zone for one day", status: "full" },
-      { label: "Face-to-face interaction with participants", status: "full" },
-    ],
-  },
-
-  // 4. 1 Hour of Exclusive Engagement Opportunities
-  {
-    id: 4,
-    keywords: [
-      { label: "1 hour of exclusive engagement slot", status: "partial" },
-      { label: "Dedicated stage / session window", status: "partial" },
-      { label: "Focused interaction period with audience", status: "partial" },
-    ],
-  },
-
-  // 5. Only Caption Submission Portal Branding
-  {
-    id: 5,
-    keywords: [
-      { label: "Caption-only branding on submission portal", status: "partial" },
-      { label: "Name presence without full visual lockup", status: "partial" },
-      { label: "Brand mentioned on portal interface", status: "partial" },
-    ],
-  },
-
-  // 6. All possible Social Media Promotion
-  {
-    id: 6,
-    keywords: [
-      { label: "All possible social media promotion", status: "full" },
-      { label: "Branded posts, tags & mentions", status: "full" },
-      { label: "Coverage across official event channels", status: "full" },
-    ],
-  },
-
-  // 7. Only Mention in Website Promotion
-  {
-    id: 7,
-    keywords: [
-      { label: "Only mention in website promotion", status: "partial" },
-      { label: "Name listed on partners section", status: "partial" },
-      { label: "No dedicated feature page or banner", status: "partial" },
-    ],
-  },
-
-  // 8. Limited Positioning in Newsletter Advertisement
-  {
-    id: 8,
-    keywords: [
-      { label: "Limited positioning in newsletter ads", status: "partial" },
-      { label: "Shared space with other partners", status: "partial" },
-      { label: "No exclusive newsletter spotlight", status: "partial" },
-    ],
-  },
-
-  // 9. One Representative will get Guest Privileges
-  {
-    id: 9,
-    keywords: [
-      { label: "One representative gets guest privileges", status: "partial" },
-      { label: "Single VIP / guest access pass", status: "partial" },
-      { label: "Limited premium access for brand team", status: "partial" },
-    ],
-  },
-
-  // 10. No Gift box Branding & Materials
-  {
-    id: 10,
-    keywords: [
-      { label: "No gift box branding included", status: "none" },
-      { label: "No materials inside participant gift box", status: "none" },
-      { label: "Gifting presence reserved for higher tiers", status: "none" },
-    ],
-  },
+  { id: 1, keywords: ["Premier title", "“Titled By” lock-up", "High recall"] },
+  { id: 2, keywords: ["Banners & posters", "Screens & backdrops", "On-ground reach"] },
+  { id: 3, keywords: ["2-day booth", "Live demos", "Lead capture"] },
+  { id: 4, keywords: ["3-hour slot", "Talks & workshops", "Focused engagement"] },
+  { id: 5, keywords: ["Submission portal", "Repeat visits", "Digital recall"] },
+  { id: 6, keywords: ["Social campaigns", "Posts & stories", "Online reach"] },
+  { id: 7, keywords: ["Event website", "Sponsor listing", "Highlights"] },
+  { id: 8, keywords: ["Gift boxes", "Promo inserts", "Take-home recall"] },
+  { id: 9, keywords: ["Newsletter slot", "Broad audience", "Targeted reach"] },
+  { id: 10, keywords: ["2 guest passes", "VIP access", "Networking"] },
 ];
 
 
 
-const Platinum = () => {
+const Premier = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const currentSponsor = premiumSponsors[currentIndex];
+  const currentSponsor = PremierSponsors[currentIndex];
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % premiumSponsors.length);
+    setCurrentIndex((prev) => (prev + 1) % PremierSponsors.length);
   };
 
   const handlePrev = () => {
     setCurrentIndex((prev) =>
-      prev === 0 ? premiumSponsors.length - 1 : prev - 1
+      prev === 0 ? PremierSponsors.length - 1 : prev - 1
     );
   };
 
   return (
     <section className="px-4 py-10 md:py-20">
-      {/* --- PLATINUM PARTNER OVERVIEW + CAROUSEL --- */}
+      {/* --- Premier PARTNER OVERVIEW + CAROUSEL --- */}
       <div className="mx-auto flex max-w-6xl flex-col gap-10 rounded-3xl border border-[#554110] p-6 backdrop-blur-md md:flex-row md:p-10">
         {/* LEFT: Overview */}
 <div className="flex-1 space-y-5 text-white">
   {/* tier pill */}
   <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/70 bg-black/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em]">
     <span className="h-1.5 w-1.5 rounded-full bg-amber-300" />
-    <span>Platinum Partnership</span>
+    <span>Premier Partnership</span>
     <span className="opacity-60">•</span>
     <span className="text-amber-100/80">Robomania 2.0</span>
   </div>
@@ -496,24 +466,21 @@ const Platinum = () => {
   <div className="space-y-2">
     <h1 className="text-[26px] md:text-[32px] font-extrabold leading-tight">
       <span className="bg-gradient-to-r from-amber-100 via-amber-300 to-yellow-500 bg-clip-text text-transparent">
-        Platinum Partner
+        Premier Partners
       </span>
       <span className="block text-[22px] md:text-[24px] font-semibold text-amber-50/90">
-        Powered By Visibility
+        Front-Row Seat to AUST Robotics
       </span>
     </h1>
 
     <p className="text-[14px] md:text-[15px] leading-relaxed text-amber-50/85">
-      As a{" "}
-      <span className="font-semibold text-amber-100">
-        Platinum Partner
-      </span>
-      , your brand anchors the{" "}
+      <span className="font-semibold text-amber-100">Premier Partners</span>{" "}
+      are our closest collaborators. They receive the{" "}
       <span className="font-semibold text-amber-200">
-        “Powered By”
+        most prominent presence across Robomania 2.0
       </span>{" "}
-      slot with focused on-ground and digital visibility wrapped around{" "}
-      <span className="font-semibold text-amber-100">Robomania 2.0</span>.
+      — from main-stage branding and segment arenas to digital campaigns and
+      social media storytelling.
     </p>
   </div>
 
@@ -521,15 +488,15 @@ const Platinum = () => {
   <div className="flex flex-wrap gap-2 pt-1">
     <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300/70 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-medium text-emerald-50">
       <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-      Powered By hero slot
+      Closest collaboration tier
     </span>
     <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/80 bg-amber-500/10 px-2.5 py-1 text-[11px] font-medium text-amber-50">
       <span className="h-1.5 w-1.5 rounded-full bg-amber-300" />
-      High-impact event visibility
+      Main-stage & arena visibility
     </span>
     <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/40 bg-black/40 px-2.5 py-1 text-[11px] font-medium text-amber-50/90">
       <span className="h-1.5 w-1.5 rounded-full bg-amber-200" />
-      Ideal before Title tier
+      Deep campus & digital reach
     </span>
   </div>
 
@@ -538,45 +505,43 @@ const Platinum = () => {
     <div className="flex items-start gap-2 rounded-2xl bg-white/5 px-3 py-2.5 backdrop-blur-md border border-white/10">
       <span className="mt-1 h-2 w-2 rounded-full bg-emerald-300" />
       <p className="text-[13px] leading-snug">
+        Logo woven across{" "}
         <span className="font-semibold text-amber-100">
-          “Powered By” presence
+          high-visibility event collaterals
         </span>{" "}
-        locked into key event materials and communication.
+        and key communication points.
       </p>
     </div>
 
     <div className="flex items-start gap-2 rounded-2xl bg-white/5 px-3 py-2.5 backdrop-blur-md border border-white/10">
       <span className="mt-1 h-2 w-2 rounded-full bg-emerald-300" />
       <p className="text-[13px] leading-snug">
-        Logo on selected{" "}
         <span className="font-semibold text-amber-100">
-          banners, screens and digital assets
-        </span>
-        .
+          Dedicated shout-outs
+        </span>{" "}
+        in ceremonies, segment intros and official social channels.
       </p>
     </div>
 
     <div className="flex items-start gap-2 rounded-2xl bg-white/3 px-3 py-2.5 backdrop-blur-md border border-amber-300/30">
       <span className="mt-1 h-2 w-2 rounded-full bg-amber-300" />
       <p className="text-[13px] leading-snug">
+        Featured spotlight on the{" "}
         <span className="font-semibold text-amber-100">
-          1-day booth
+          Robomania 2.0 website
         </span>{" "}
-        for demos, product experiences and face-to-face engagement.
+        with story-driven brand placement.
       </p>
     </div>
 
     <div className="flex items-start gap-2 rounded-2xl bg-white/3 px-3 py-2.5 backdrop-blur-md border border-amber-300/30">
       <span className="mt-1 h-2 w-2 rounded-full bg-amber-300" />
       <p className="text-[13px] leading-snug">
+        On-ground{" "}
         <span className="font-semibold text-amber-100">
-          1-hour exclusive slot
+          activation opportunities at the AUST campus
         </span>{" "}
-        for talk / product demo / workshop +{" "}
-        <span className="font-semibold text-amber-100">
-          limited portal, website & newsletter branding
-        </span>{" "}
-        and <span className="font-semibold text-amber-100">1 guest pass</span>.
+        to meet, demo and engage with students.
       </p>
     </div>
   </div>
@@ -584,15 +549,15 @@ const Platinum = () => {
   {/* CTA */}
   <div className="pt-2">
     <button className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 px-6 py-2.5 text-[14px] font-semibold text-black shadow-[0_12px_40px_rgba(0,0,0,0.6)] transition-transform duration-150 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/90">
-      <span>Become a Platinum Partner</span>
+      <span>Become a Premier Partner</span>
       <span className="text-[16px]" aria-hidden="true">
         →
       </span>
     </button>
     <p className="mt-2 text-[11px] text-amber-100/75">
-      Positioned for brands that want{" "}
-      <span className="font-semibold">hero-level visibility</span> with a clear
-      “Powered By” association to Robomania 2.0.
+      Designed for brands that want a{" "}
+      <span className="font-semibold">front-row, long-term presence</span> in
+      AUST’s flagship robotics ecosystem.
     </p>
   </div>
 </div>
@@ -604,7 +569,7 @@ const Platinum = () => {
             <div className="relative w-full max-w-sm">
               <div className="overflow-hidden rounded-3xl border border-[#554110] px-6 py-8">
                 <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.18em] text-white">
-                  Featured Platinum Sponsor
+                  Featured Premier Sponsor
                 </p>
 
                 <AnimatePresence mode="wait">
@@ -618,7 +583,7 @@ const Platinum = () => {
                   >
                     <div
                       className="flex h-[120px] w-full items-center justify-center rounded-2xl"
-                      style={{ backgroundColor: "white" }}
+                      style={{ backgroundColor: "white" }} // subtle brand-tinted bg
                     >
                       <img
                         src={currentSponsor.logo}
@@ -648,7 +613,7 @@ const Platinum = () => {
                   ‹ Prev
                 </button>
                 <div className="flex items-center gap-2">
-                  {premiumSponsors.map((sponsor, index) => (
+                  {PremierSponsors.map((sponsor, index) => (
                     <button
                       key={sponsor.name}
                       onClick={() => setCurrentIndex(index)}
@@ -670,21 +635,16 @@ const Platinum = () => {
               </div>
 
               <p className="mt-3 text-center text-[12px] text-white">
-                {currentIndex + 1} / {premiumSponsors.length} Platinum Sponsors
+                {currentIndex + 1} / {PremierSponsors.length} Premier Sponsors
               </p>
             </div>
           </div>
         </div>
       </div>
-
-      <Promotional_Opportunity
-        contents={PlatinumContents}
-        keywords={premierKeywords}
-      />
+      <Promotional_Opportunity contents={PremierContents}  keywords = {premierKeywords} />
       <PartnershipMatrix />
     </section>
   );
 };
 
-export default Platinum;
-
+export default Premier;
