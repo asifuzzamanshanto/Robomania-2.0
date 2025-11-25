@@ -93,10 +93,11 @@ const achievements = [
     event: "JUSC National Science Festival 2024",
     image: "https://ik.imagekit.io/mekt2pafz/Achievements/Jusc.jpeg",
   },
+ 
   {
-    title: "1st Runner-Up – RoboCup Championship",
+    title: "2nd Runner-Up – RoboCup Championship",
     event: "DUET TechFest 2023",
-    image: "/images/about/achievements/duet-robocup.jpg",
+    image: "https://ik.imagekit.io/mekt2pafz/Achievements/Duet.jpeg",
   },
   {
     title: "1st Runner-Up – Robotics Contest",
