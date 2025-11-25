@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 const sponsorLogos = [
   "https://cdn.ittefaqbd.com/contents/themes/public/style/images/logo.svg",
   "https://images.seeklogo.com/logo-png/39/2/ntv-channel-logo-png_seeklogo-396286.png",
-  "https://techtopiabd.com/wp-content/uploads/2023/03/logo_150_by_150-01.png",
   "https://www.primebank.com.bd/web/new_assets/assets/images/new-logo-en.png",
   "https://www.ispahanifoods.com/wp-content/uploads/2019/10/logo.png",
   "https://scontent.fdac138-2.fna.fbcdn.net/v/t39.30808-6/471852262_610576054806180_1030698770042489876_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_p2X42aiafkQ7kNvwGHvqXJ&_nc_oc=AdniX2raKE7K29qIhcQT33DHJVdJ2XC1cHaVawcew8iwL1Ig2VbjR-HClk0gcAW8Bcs&_nc_zt=23&_nc_ht=scontent.fdac138-2.fna&_nc_gid=XUiVLPshsKbl8OUBdP3yfw&oh=00_AfgTOSRjBYYAXg2i1swejAg_zrGlri3AxDsg60JTPVMnrQ&oe=692638A7",
