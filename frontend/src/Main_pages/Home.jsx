@@ -798,18 +798,6 @@ const Carousel3D = ({
                       </p>
                     </div>
 
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-full py-2.5 sm:py-3 md:py-3.5 px-3 sm:px-4 rounded-xl bg-linear-to-r from-amber-500 to-amber-600 text-black font-semibold text-xs sm:text-sm md:text-base"
-                      style={{
-                        boxShadow:
-                          "0 0 20px rgba(251, 191, 36, 0.4)",
-                      }}
-                    >
-                      {item.ctaLabel}
-                    </motion.button>
-
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -1087,15 +1075,6 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-wrap justify-center gap-3">
-                  <motion.button
-                    whileHover={{ scale: 1.05, y: -1 }}
-                    whileTap={{ scale: 0.96 }}
-                    onClick={() => navigate("/segments")}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-linear-to-r from-amber-500 to-amber-600 text-black font-semibold text-sm sm:text-base shadow-[0_0_20px_rgba(251,191,36,0.5)]"
-                  >
-                    Explore Segments
-                    <ArrowRight className="w-4 h-4" />
-                  </motion.button>
 
                   <motion.button
                     whileHover={{ scale: 1.05, y: -1 }}
@@ -1134,64 +1113,93 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3D Carousel Section - Competition Segments */}
-      <section className="px-4 py-10 md:py-16">
-        <div className="mx-auto max-w-7xl">
-          <div
-            className="relative rounded-2xl md:rounded-3xl border border-amber-500/20 bg-linear-to-br from-amber-950/20 via-black/40 to-amber-900/20 backdrop-blur-md p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden"
-            style={{
-              boxShadow:
-                "0 0 40px rgba(251, 191, 36, 0.15), inset 0 1px 0 rgba(251, 191, 36, 0.1)",
-            }}
+<section className="px-4 py-10 md:py-16">
+  <div className="mx-auto max-w-7xl">
+    <div
+      className="relative rounded-2xl md:rounded-3xl border border-amber-500/20 bg-linear-to-br from-amber-950/20 via-black/40 to-amber-900/20 backdrop-blur-md p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden"
+      style={{
+        boxShadow:
+          "0 0 40px rgba(251, 191, 36, 0.15), inset 0 1px 0 rgba(251, 191, 36, 0.1)",
+      }}
+    >
+      <div className="absolute inset-0 bg-linear-to-br from-amber-500/5 via-transparent to-amber-600/5 pointer-events-none" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12 md:mb-16 relative z-10"
+      >
+        <motion.h2
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 bg-linear-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent"
+          style={{
+            textShadow: "0 0 40px rgba(251, 191, 36, 0.3)",
+            filter: "drop-shadow(0 4px 8px rgba(251, 191, 36, 0.3))",
+          }}
+        >
+          Competition Segments
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="text-amber-100/70 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto px-2"
+        >
+          Explore diverse tracks crafted to challenge your hardware,
+          software and design skills.
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="relative z-10"
+      >
+        <Carousel3D
+          items={SEGMENTS_DATA}
+          autoPlay={true}
+          autoPlayInterval={4000}
+          showArrows={true}
+        />
+      </motion.div>
+
+      {/* Gold CTA button under carousel */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="relative z-10 mt-8 md:mt-10 flex justify-center"
+      >
+        {/* use Link if you're on react-router, or <a href="/segments"> */}
+        <a href="/segments">
+          <motion.button
+            whileHover={{ scale: 1.05, y: -1 }}
+            whileTap={{ scale: 0.96 }}
+            className="
+              inline-flex items-center gap-2
+              rounded-full px-6 py-3
+              text-sm md:text-base font-semibold
+              bg-gradient-to-r from-[#F5CB7A] via-[#FFE4A3] to-[#FACC6B]
+              text-black
+              border border-amber-400/70
+              shadow-[0_10px_30px_rgba(0,0,0,0.7)]
+              hover:shadow-[0_0_30px_rgba(251,191,36,0.6)]
+              transition-all duration-300
+            "
           >
-            <div className="absolute inset-0 bg-linear-to-br from-amber-500/5 via-transparent to-amber-600/5 pointer-events-none" />
+            Explore the Segments
+          </motion.button>
+        </a>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12 md:mb-16 relative z-10"
-            >
-              <motion.h2
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 bg-linear-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent"
-                style={{
-                  textShadow: "0 0 40px rgba(251, 191, 36, 0.3)",
-                  filter:
-                    "drop-shadow(0 4px 8px rgba(251, 191, 36, 0.3))",
-                }}
-              >
-                Competition Segments
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="text-amber-100/70 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto px-2"
-              >
-                Explore diverse tracks crafted to challenge your hardware,
-                software and design skills.
-              </motion.p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative z-10"
-            >
-              <Carousel3D
-                items={SEGMENTS_DATA}
-                autoPlay={true}
-                autoPlayInterval={4000}
-                showArrows={true}
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Partners Section */}
       <section className="px-4 py-16 md:py-24">
