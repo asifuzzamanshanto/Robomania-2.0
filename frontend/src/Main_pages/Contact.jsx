@@ -48,42 +48,61 @@ const Contact = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="relative z-10 pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-sm font-medium"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Get In Touch</span>
-            </motion.div>
+<div className="relative z-10 flex items-center justify-center px-4 pt-24 pb-20">
+  {/* extra soft glow on top of your existing blurred background */}
+  <div className="pointer-events-none absolute inset-x-0 -top-10 -z-10 flex justify-center">
+    <div className="h-40 w-40 rounded-full bg-amber-500/40 blur-3xl opacity-70" />
+  </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold">
-              <span className="bg-linear-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent">
-                Contact Us
-              </span>
-            </h1>
+  <motion.div
+    initial={{ opacity: 0, y: 30, scale: 0.96 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="relative max-w-3xl w-full mx-auto rounded-3xl border border-amber-400/30 
+               bg-amber-900/10 bg-gradient-to-br from-amber-500/10 via-emerald-500/5 to-transparent
+               backdrop-blur-xl shadow-[0_18px_80px_rgba(0,0,0,0.75)] 
+               px-6 py-10 sm:px-10 sm:py-12 text-center"
+  >
+    {/* glowing border accent */}
+    <div className="pointer-events-none absolute inset-0 rounded-3xl border border-amber-300/10" />
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-amber-100/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
-            >
-              We're here to assist you with any questions, partnership discussions, 
-              or clarifications about Robomania 2.0 and AUST Robotics Club.
-            </motion.p>
-          </motion.div>
-        </div>
-      </div>
+    <div className="relative space-y-6">
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="inline-flex items-center gap-2 px-4 py-2 rounded-full 
+                   bg-amber-500/15 border border-amber-300/40 
+                   text-amber-200 text-xs sm:text-sm font-semibold
+                   shadow-[0_0_30px_rgba(251,191,36,0.35)]"
+      >
+        <Mail className="w-4 h-4" />
+        <span>Get In Touch</span>
+      </motion.div>
+
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+        <span className="bg-linear-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent">
+          Contact Us
+        </span>
+      </h1>
+
+      {/* small underline glow */}
+      <div className="mx-auto h-[2px] w-24 rounded-full bg-gradient-to-r from-amber-200/20 via-amber-400/80 to-amber-200/20" />
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        className="text-amber-50/80 text-base sm:text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+      >
+        We're here to assist you with any questions, partnership discussions, 
+        or clarifications about <span className="font-semibold text-amber-100">Robomania 2.0</span> and 
+        <span className="font-semibold text-amber-100"> AUST Robotics Club</span>.
+      </motion.p>
+    </div>
+  </motion.div>
+</div>
+
 
       {/* Main Content */}
       <div className="relative z-10 px-4 pb-20">
